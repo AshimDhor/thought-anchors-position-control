@@ -1,24 +1,3 @@
-"""Is the filler actually in-distribution, or is it an intrusion?
-
-The filler arm's whole logic is that it changes the *content* of slot ``i`` while
-leaving everything else alone.  That logic fails if the filler is text the model
-would essentially never write there: then the arm measures disruption, and the
-real sentence looks important for the wrong reason.
-
-This is checkable without generating anything.  Score the prefix followed by (a)
-the sentence the model actually wrote and (b) the filler, and read off the
-model's own average token log-probability for each.  Two numbers matter:
-
-* the **gap** between them -- the real sentence should be more likely, since the
-  model did write it, but a filler that is many nats per token worse is an
-  intrusion rather than a bland alternative;
-* how that gap compares to the spread of log-probabilities among the model's own
-  sentences, which sets the scale for "unusual".
-
-We also score a deliberately alien sentence as a reference point for what an
-actual intrusion looks like on this scale.
-"""
-
 from __future__ import annotations
 
 import argparse

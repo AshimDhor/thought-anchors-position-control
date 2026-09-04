@@ -1,15 +1,3 @@
-"""Stage 0: find problems the model is genuinely uncertain about.
-
-Resampling importance measures how much a sentence moved the distribution over
-final answers.  On a problem the model always gets right, that distribution is a
-point mass and every sentence scores zero -- not because sentences do not matter
-but because the measurement has no room.  So we first screen a pool and keep
-problems whose pass rate sits inside DIFFICULTY_BAND.
-
-Output: data/screen_<model>.json with the pass rate and answer spread of every
-candidate, so the selection is auditable rather than asserted.
-"""
-
 from __future__ import annotations
 
 import argparse

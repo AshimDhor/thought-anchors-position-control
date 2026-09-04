@@ -1,17 +1,3 @@
-"""Diagnostic: how long are this model's traces, and when does it finish?
-
-Why this exists.  The difficulty screen was supposed to find problems the model
-is genuinely uncertain about.  It found instead that pass rate and truncation
-rate correlate at -0.90: at a 3584-token budget, Olmo-3-7B-Think either finishes
-and is right, or runs out of budget and scores zero.  The screen was measuring
-the token cap, not difficulty.
-
-Sweep cost is quadratic in trace length -- a rollout from prefix i has to write
-the rest of the trace -- so "just raise the budget" is not free.  Before
-choosing a model, a budget, and a prompt, measure the joint distribution of
-(trace length, finished, correct) for each candidate.  That is what this does.
-"""
-
 from __future__ import annotations
 
 import argparse

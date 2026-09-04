@@ -1,10 +1,3 @@
-"""Emit synthetic files in the exact on-disk format the real stages produce.
-
-Purpose is purely mechanical: run stages 3, 5 and 7 against these before
-spending GPU hours, so that a schema or plotting bug surfaces in seconds rather
-than after the sweep. The numbers are meaningless; only the shapes matter.
-"""
-
 from __future__ import annotations
 
 import json

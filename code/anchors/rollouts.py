@@ -1,18 +1,3 @@
-"""Rollout engine.
-
-One vLLM instance serves every experiment.  The only subtlety is prompt
-construction: a rollout from prefix ``i`` must look to the model exactly like
-its own half-finished thought, not like a reconstruction of it.  Both models we
-use open the reasoning block in their generation prompt (``...assistant\\n<think>``),
-so we build
-
-    chat_template(problem, add_generation_prompt=True) + thinking_trace[:end_i]
-
-and let the model carry on.  Because ``thinking_trace[:end_i]`` is a literal
-slice of text the model itself produced, there is no re-rendering step that
-could put the continuation off-distribution.
-"""
-
 from __future__ import annotations
 
 import os
@@ -29,25 +14,13 @@ class GenConfig:
     temperature: float = 0.6      # the sampling settings both model cards
     top_p: float = 0.95           # recommend for reasoning mode
     max_tokens: int = 3072
-    # Deliberately None.  A fixed SamplingParams.seed makes vLLM fully
-    # deterministic *per prompt*: 24 identical requests at seed=12345 returned
-    # only 8 distinct completions in total (the same 8, 24 times), while
-    # unseeded returned 192/192 distinct at identical throughput. Every prompt
-    # in this study is unique, so a seed would not have corrupted the results --
-    # but it would have imposed common random numbers across neighbouring
-    # prefixes, and the estimator wants independent draws either side of the
-    # comparison. Reproducibility comes from storing every raw rollout instead.
+
     seed: int | None = None
     stop: list[str] = field(default_factory=list)
 
 
 class Engine:
-    """Thin wrapper over vLLM, with a plain-transformers fallback.
 
-    vLLM is 10-20x faster here and is what the reported runs used; the fallback
-    exists so the pipeline is runnable on a machine without it, and so a broken
-    install never silently becomes a scientific decision.
-    """
 
     def __init__(self, model: str, gpu_memory_utilization: float = 0.85,
                  tensor_parallel_size: int = 1, max_model_len: int = 8192,
@@ -75,22 +48,7 @@ class Engine:
             gpu_memory_utilization=gpu_memory_utilization,
             tensor_parallel_size=tensor_parallel_size,
             max_model_len=max_model_len,
-            # Measured on this node (slurm/probe.sbatch, job 1473) over a
-            # workload shaped like the real sweep -- many prompts sharing a long
-            # prefix:
-            #   eager    + prefix cache : 5205 tok/s
-            #   cudagraph+ prefix cache : 3868 tok/s  (and 42s to load)
-            #   eager    + no cache     : 2566 tok/s
-            # CUDA graphs lose here because the batch is prefill-heavy, so we
-            # take eager and spend the memory on KV cache instead.
-            enforce_eager=True,
-            # Every prefix of a trace shares a prefix with every longer one, so
-            # the sweep re-reads the same tokens O(n) times.  Prefix caching
-            # turns that from the dominant cost into a rounding error.
-            enable_prefix_caching=True,
-            # Left at the default, the sweep ran at a few hundred tokens/s
-            # because too few sequences were resident at once. Raising it took
-            # the same workload to ~3.5k tok/s.
+
             max_num_seqs=max_num_seqs,
         )
 
@@ -133,14 +91,7 @@ class Engine:
     # ---- prompt construction -------------------------------------------------
 
     def chat_prefix(self, question: str, instruction: str) -> str:
-        """The prompt up to and including the model's opening ``<think>``.
 
-        Models differ on who writes that tag.  Olmo-3-Think's generation prompt
-        ends with ``<think>`` already; Qwen3's does not, and the model emits it
-        as its first output token.  Either way a rollout has to resume *inside*
-        the reasoning block, so we normalise by appending the opening tag
-        ourselves when the template did not.
-        """
         msgs = [{"role": "user", "content": f"{question}\n\n{instruction}"}]
         base = self.tokenizer.apply_chat_template(
             msgs, tokenize=False, add_generation_prompt=True
@@ -174,18 +125,9 @@ class Engine:
 
 
 def split_thinking(completion: str) -> tuple[str, str]:
-    """Split a completion into (reasoning trace, post-</think> answer text).
 
-    If the model never closed the block -- it ran out of budget mid-thought --
-    the whole completion is reasoning and there is no answer section.  Those
-    rollouts are counted as ``<none>``, and their rate is reported, because
-    silently scoring them as wrong would manufacture exactly the kind of
-    positional trend this project is trying to measure.
-    """
     body = completion
-    # If the model re-emitted the opening tag (because the template did not),
-    # drop it so that `thinking` is the reasoning text itself and prefixes stay
-    # comparable across models.
+
     stripped = body.lstrip()
     if stripped.startswith(THINK_OPEN):
         body = stripped[len(THINK_OPEN):].lstrip("\n")

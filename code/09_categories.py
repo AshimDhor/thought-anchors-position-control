@@ -1,27 +1,3 @@
-"""Stage 8: is the categorical anchor story a positional one?
-
-Thought anchors reports that certain *kinds* of sentence carry disproportionate
-importance -- planning and uncertainty management especially.  That is the claim
-most exposed to a positional confound, because a sentence's kind is largely
-determined by where it sits: problem setup and planning come first, self-checking
-and final answers come last.
-
-So we ask three things:
-
-1. How strongly is category determined by position at all?  If it isn't, there is
-   no confound to worry about and the rest of this file is moot.
-2. How much of the variance in importance does category explain *on its own*,
-   and how much survives once position is partialled out?  We compare nested
-   linear models: position only, category only, and both.
-3. Does the *ranking* of categories change after residualising against position?
-   That is the practical question -- the ranking is what a reader takes away.
-
-The caveat from the simulator applies and is reported alongside: if a category's
-importance is real and that category genuinely lives at a characteristic
-position, residualising removes real signal.  This analysis bounds the confound;
-it does not by itself settle it.  The filler and paraphrase arms do that.
-"""
-
 from __future__ import annotations
 
 import argparse
@@ -36,7 +12,6 @@ from anchors.baselines import position_only_baseline
 
 
 def _ols_r2(X: np.ndarray, y: np.ndarray) -> float:
-    """R^2 of an OLS fit with an intercept, via least squares."""
     A = np.column_stack([np.ones(len(y)), X]) if X.size else np.ones((len(y), 1))
     beta, *_ = np.linalg.lstsq(A, y, rcond=None)
     resid = y - A @ beta

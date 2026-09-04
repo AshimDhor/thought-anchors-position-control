@@ -1,35 +1,3 @@
-"""Stage 9: take the same critique white-box.
-
-Thought Anchors has a second, mechanistic method alongside resampling:
-*receiver heads* -- attention heads that reach back and concentrate on
-particular earlier sentences, marking those sentences as "broadcasting".  The
-paper reports that this converges with the black-box measure, which is offered
-as mutual corroboration.
-
-The positional worry applies harder here, not less.  Attention carries strong
-position-dependent structure that has nothing to do with content: recency,
-attention sinks at the first token, and induction-style local patterns.  So a
-head that looks like it "selects important sentences" may be selecting
-*positions*.  If the black-box and white-box measures agree because both are
-positional, their agreement is not corroboration at all.
-
-What this script produces, per trace:
-
-* ``M[layer, head, i, j]`` -- attention mass sent from a token of sentence i to
-  sentence j, aggregated from the token level.  This is the object the
-  sentence-level attention figures are drawn from.
-* a per-head **receiver score**: how sharply that head's backward attention
-  concentrates on a few source sentences rather than spreading evenly.
-* a per-sentence **white-box importance**: attention received from later
-  sentences, averaged over the most receiver-like heads.
-
-The last one is then fed through exactly the same position-only control as the
-black-box measure, so the two are judged by the same standard.
-
-Runs under HF transformers with eager attention, because vLLM does not expose
-attention weights.  One forward pass per trace, no sampling.
-"""
-
 from __future__ import annotations
 
 import argparse
@@ -43,13 +11,7 @@ from anchors import config as C
 
 def sentence_token_spans(tokenizer, chat_prefix: str, thinking: str,
                          sentences: list[dict]) -> tuple[list[range], dict]:
-    """Map each sentence's character span to a range of token indices.
 
-    The full string is tokenised in one go -- tokenising the prefix and the
-    thinking separately and concatenating is not guaranteed to give the same
-    tokens, and a half-token mismatch would silently shift every sentence
-    boundary by one.
-    """
     full = chat_prefix + thinking
     enc = tokenizer(full, return_offsets_mapping=True, add_special_tokens=False)
     offsets = enc["offset_mapping"]

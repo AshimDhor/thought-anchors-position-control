@@ -1,13 +1,3 @@
-"""Stage 6: dump randomly selected raw examples.
-
-Everything in this project rests on three judgement calls a reader cannot check
-from summary statistics: that the sentence splitter produces sensible units,
-that the answer extractor agrees with what the rollout actually concluded, and
-that the category labels mean what they say.  So we print randomly selected --
-not hand-picked -- examples of each, with a fixed seed, straight into the
-write-up.
-"""
-
 from __future__ import annotations
 
 import argparse

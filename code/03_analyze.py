@@ -1,9 +1,3 @@
-"""Stage 3: importance, the position-only control, and the filler control.
-
-Writes one tidy row per sentence (data/sentences_<model>.csv) plus a JSON
-summary holding every number the write-up quotes.
-"""
-
 from __future__ import annotations
 
 import argparse
@@ -29,10 +23,7 @@ def load_arm(tag: str, arm: str) -> dict[tuple[str, int], dict]:
 
 
 def dissimilarity_masks(traces, main_arm) -> dict[tuple[str, int], list[bool]]:
-    """For each prefix i, flag rollouts whose first new sentence is unlike S_{i+1}.
 
-    Follows the paper: cosine similarity under all-MiniLM-L6-v2, threshold 0.8.
-    """
     from sentence_transformers import SentenceTransformer
 
     model = SentenceTransformer(C.EMBED_MODEL, device="cpu")
@@ -123,13 +114,10 @@ def main() -> None:
     df.to_csv(C.DATA / f"sentences_{tag}.csv", index=False)
     print(f"wrote sentences_{tag}.csv  ({len(df)} sentences)")
 
-    # ---- headline numbers ----------------------------------------------------
     summary: dict = {
         "model": args.model,
         "n_traces": int(df.trace_id.nunique()),
         "n_sentences": int(len(df)),
-        # Read from the data, not the config: two independent passes were
-        # pooled, so the constant no longer describes what was actually run.
         "rollouts_per_prefix": int(np.median(
             [len(r["answers"]) for r in main_arm.values()])),
         "rollouts_per_prefix_config": C.ROLLOUTS_PER_PREFIX,
@@ -201,15 +189,7 @@ def main() -> None:
               f"{both.kl_counterfactual.mean():.3f} vs semantically-similar "
               f"{both.kl_similar.mean():.3f}; gap {pt:+.3f} [{lo:+.3f},{hi:+.3f}]")
 
-    # Robustness: are the truncated rollouts driving this?
-    #
-    # A rollout that runs out of budget mid-thought has no boxed answer and is
-    # scored as its own outcome, <none>. The amount of reasoning left to write
-    # shrinks along a trace, so the rate of those is itself a function of
-    # position -- which is precisely the kind of thing that could manufacture a
-    # positional pattern out of nothing. Here we recompute everything with those
-    # rollouts dropped rather than labelled, renormalising over real answers
-    # only. If the headline numbers move, the effect was about truncation.
+
     no_ans_rate, kept_vals, kept_tid, kept_pos = [], [], [], []
     for t in traces:
         tid, n, gold = t["trace_id"], t["n_sentences"], t["gold"]

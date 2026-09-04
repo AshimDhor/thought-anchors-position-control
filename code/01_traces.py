@@ -1,10 +1,3 @@
-"""Stage 1: pick the in-band problems and generate one base trace for each.
-
-The base trace is the object whose sentences we score.  We generate it with a
-fixed seed and record it verbatim, because every prefix used later is a literal
-slice of this string.
-"""
-
 from __future__ import annotations
 
 import argparse

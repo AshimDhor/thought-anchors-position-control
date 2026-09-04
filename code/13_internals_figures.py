@@ -1,12 +1,3 @@
-"""Figures for the white-box arm.
-
-The point of these is not decoration. The black-box measure came out
-non-positional and the attention measure came out strongly positional, and that
-split is the paper's claim of mutual corroboration coming apart. These figures
-show *where in the network* that happens: which heads look like they select
-important sentences, and how much of what they select is explained by position.
-"""
-
 from __future__ import annotations
 
 import argparse

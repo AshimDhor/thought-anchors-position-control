@@ -1,35 +1,3 @@
-"""Sentence importance by resampling, following Bogdan et al. (thought anchors).
-
-Their definitions, which we reimplement rather than approximate:
-
-    resampling importance      importance_r := D_KL[ p(A'_i) || p(A_i) ]
-    counterfactual importance  importance   := D_KL[ p(A'_i | T_i !~ S_i) || p(A_i) ]
-
-where ``A_i`` is the distribution over final answers when the model continues
-from the prefix that *includes* sentence ``S_i``, and ``A'_i`` the distribution
-when it continues from the prefix that *stops before* ``S_i`` -- so the model
-resamples a replacement sentence ``T_i`` and carries on.  The counterfactual
-variant keeps only rollouts whose replacement was semantically different from
-the original (cosine similarity below SIM_THRESHOLD under all-MiniLM-L6-v2).
-
-Note that ``A'_i`` and ``A_{i-1}`` are the same object: the rollouts launched
-from prefix ``S_{<i}``.  So a single sweep over the ``n+1`` prefix boundaries
-supplies every importance in the trace.
-
-Two things this file is careful about, because both create positional artefacts
-if ignored:
-
-* **A finite-sample floor.**  With R rollouts a side, the empirical KL is
-  strictly positive even when the two distributions are identical.  Its size
-  depends on how much mass and how many distinct answers there are, both of
-  which change systematically along a trace.  We estimate the floor by
-  parametric bootstrap under the null and report it alongside every number.
-* **Rollouts with no answer.**  A rollout that exhausts its token budget
-  mid-thought gets its own outcome label rather than being scored wrong.
-  Folding it into "incorrect" would put a positional trend into the data by
-  hand, since later prefixes leave less budget to run over.
-"""
-
 from __future__ import annotations
 
 from collections import Counter
@@ -39,10 +7,6 @@ import numpy as np
 
 NO_ANSWER = "<none>"
 
-# Jeffreys prior.  Some smoothing is unavoidable -- an empirical distribution
-# with a zero makes KL infinite -- and 1/2 is the standard non-informative
-# choice.  03_analyze.py re-runs the headline numbers at 0.25 and 1.0 to show
-# the conclusions do not depend on it.
 SMOOTHING = 0.5
 
 
@@ -192,16 +156,7 @@ def sentence_importances(
         else:
             kl_cf = float("nan")
 
-        # The free control.  The *complement* of that filter -- rollouts whose
-        # replacement sentence came out semantically LIKE the original -- is an
-        # on-policy paraphrase arm that costs nothing extra, because those
-        # rollouts were generated anyway and then discarded.
-        #
-        # If importance is about content, replacing a sentence with a paraphrase
-        # should leave the answer distribution alone, so kl_similar should sit
-        # well below kl_counterfactual.  If the two are the same size, then what
-        # the measure responds to is that a resampling happened at position i,
-        # not what was said there.
+        
         if before.n_similar > 0:
             sup_s = sorted(set(before.counts_similar) | set(after.counts))
             kl_sim = kl(_probs(before.counts_similar, sup_s, smoothing),

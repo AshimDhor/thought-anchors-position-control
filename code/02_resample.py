@@ -1,18 +1,3 @@
-"""Stage 2: the prefix sweep, and the filler control.
-
-For each trace we roll the model out ``R`` times from every prefix boundary
-``i in {-1, 0, ..., n-1}``, where ``i = -1`` is the empty prefix (the model
-writes its own reasoning from scratch).  ``A_i`` is the resulting answer
-distribution and the effect of sentence ``i`` is ``d(A_i, A_{i-1})``.
-
-The filler arm answers the question the main arm cannot.  At each boundary we
-also roll out from ``trace[:start_i] + FILLER`` -- the same position, reached
-through a sentence that carries no task content.  If a content-free sentence at
-position ``i`` moves the answer distribution as much as the real sentence did,
-then whatever the main arm measured at ``i`` was not about what the sentence
-said.
-"""
-
 from __future__ import annotations
 
 import argparse
@@ -25,26 +10,16 @@ from anchors import config as C
 from anchors.answers import final_answer
 from anchors.rollouts import Engine, GenConfig, split_thinking
 from anchors.splitting import split_sentences
-
-# What the model wrote instead of the original sentence, when what it "wrote"
-# was to stop reasoning altogether. This is a real counterfactual -- the model
-# declined to continue -- so it needs a token the embedder can compare, rather
-# than an empty string whose embedding is meaningless.
 ENDED_REASONING = "<ended reasoning and gave the answer>"
 
-# Deliberately bland continuations that a reasoning model writes all the time,
-# so the prefix stays in-distribution.  Using an obviously alien string would
-# measure disruption, not position.
+
 FILLERS = [
     "Let me think about this a bit more carefully.",
     "Hmm, let me continue.",
     "Okay, let me keep going.",
 ]
 
-# These traces are outlines, so a filler dropped into a bulleted list without its
-# marker reads as an intrusion rather than as the next item.  We copy whatever
-# marker the real sentence carried, so the only thing that differs between the
-# two arms is the content of the sentence, not its formatting.
+
 _MARKER = re.compile(r"^([-*+\u2022]\s+|\d{1,2}[.)]\s+)")
 
 
@@ -56,29 +31,9 @@ def matched_filler(original: str, k: int) -> str:
 
 def sample_windows(n_sent: int, n_windows: int, window_len: int,
                    rng: np.random.Generator) -> list[int]:
-    """Prefix indices to sweep, when measuring a random subsample of sentences.
-
-    A full sweep costs ``n+1`` prefixes.  On the traces this method is actually
-    applied to that is unaffordable (see writeup/RESEARCH_LOG.md), so we measure
-    the *same* sentence-level quantity on a random subsample instead of
-    coarsening the unit -- the sentence is what the paper's claims are about, so
-    changing the unit would change what is being tested.
-
-    Sampling *windows* of consecutive sentences rather than isolated ones is what
-    makes this cheap.  Sentence i needs prefixes i-1 and i, so isolated sentences
-    cost 2 prefixes each; a run of L consecutive sentences costs L+1 prefixes and
-    yields L measurements. Window starts are spread across the trace so position
-    coverage stays even, which matters because position is the variable under
-    study.
-    """
     if n_sent <= n_windows * window_len:
         return list(range(-1, n_sent))
-    # Even strata, jittered within each, so coverage is uniform but not a grid.
-    # The first and last windows are pinned to the ends of the trace rather than
-    # jittered: the start is where the no-CoT baseline A_{-1} enters, and the end
-    # is where the answer distribution collapses. Those are the two regions the
-    # positional hypothesis is actually about, so leaving them uncovered would
-    # be measuring everywhere except where it matters.
+
     edges = np.linspace(0, n_sent - window_len, n_windows + 1)
     starts = {0, n_sent - window_len}
     for k in range(n_windows):
@@ -147,17 +102,13 @@ def main() -> None:
     ap.add_argument("--rollouts", type=int, default=C.ROLLOUTS_PER_PREFIX)
     ap.add_argument("--gpu-frac", type=float, default=0.85)
     ap.add_argument("--max-tokens", type=int, default=C.MAX_NEW_TOKENS)
-    # Sharding is by trace, not by prefix: every prefix of a trace shares a long
-    # common prefix, so keeping a trace on one worker is what makes prefix
-    # caching pay off.
+
     ap.add_argument("--shard", type=int, default=0)
     ap.add_argument("--n-shards", type=int, default=1)
     ap.add_argument("--n-windows", type=int, default=C.N_WINDOWS,
                     help="0 = sweep every prefix; else sample this many windows")
     ap.add_argument("--window-len", type=int, default=C.WINDOW_LEN)
-    # Independent passes over the same prefixes pool into a larger R (rollouts
-    # are unseeded, so a second pass draws fresh samples). They must not collide
-    # on disk, hence the suffix.
+
     ap.add_argument("--pass-id", type=int, default=1)
     args = ap.parse_args()
 
@@ -186,15 +137,10 @@ def main() -> None:
     records = []
     for j, comps in zip(jobs, outs):
         answers = [final_answer(c) for c in comps]
-        # The first sentence each rollout writes is the resampled replacement
-        # T_i.  Counterfactual importance needs it to decide whether the
-        # replacement was semantically unlike the original, so we keep it here
-        # rather than storing every full completion.
+
         firsts = []
         for c in comps:
-            # Only the reasoning part counts: if the continuation opens with
-            # </think>, the model's "replacement" was to stop thinking, not to
-            # write a different sentence.
+
             think, _ = split_thinking(c)
             sents = split_sentences(think)
             firsts.append(sents[0].text if sents else ENDED_REASONING)

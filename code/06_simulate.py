@@ -1,28 +1,3 @@
-"""Instrument validation: run the real analysis on data whose truth we planted.
-
-Three worlds, and the third exists because building the first two exposed a
-limitation of the position-only control that matters for how the real results
-should be read.
-
-``null``          no sentence causes anything.  A well-behaved measure should
-                  sit at its noise floor, and the filler arm should match the
-                  real arm.  Whether importance *also* shows a positional
-                  pattern here is the diagnostic we care about: if it does, the
-                  measure is positional by construction and nothing measured on
-                  a real model can be trusted without correction.
-
-``anchor_random`` one step per trace carries a real effect, at a position drawn
-                  uniformly.  The measure must find it -- raw, and after the
-                  position-only prediction is subtracted.
-
-``anchor_fixed``  the same effect, but always at the same normalised position.
-                  Here the position-only predictor learns the anchor itself, so
-                  residualising *deletes a real finding*.  This is the honest
-                  limit of the correlational control, and the reason the filler
-                  arm -- which holds position fixed and varies only content --
-                  is the load-bearing comparison rather than a nice-to-have.
-"""
-
 from __future__ import annotations
 
 import argparse

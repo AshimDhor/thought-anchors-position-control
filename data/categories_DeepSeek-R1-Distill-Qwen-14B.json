@@ -1,0 +1,150 @@
+{
+  "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
+  "measure": "kl_resampling",
+  "label_col": "label_Qwen3-8B",
+  "n": 254,
+  "categories": [
+    "active_computation",
+    "fact_retrieval",
+    "final_answer",
+    "plan_generation",
+    "problem_setup",
+    "result_consolidation",
+    "self_checking",
+    "uncertainty_management"
+  ],
+  "category_position": {
+    "kruskal_H": 75.31157575996752,
+    "kruskal_p": 1.2396767691937618e-13,
+    "mean_position_by_category": {
+      "active_computation": 0.5486050175476669,
+      "fact_retrieval": 0.31581828245705623,
+      "final_answer": 0.8771803922836959,
+      "plan_generation": 0.4018707928008552,
+      "problem_setup": 0.27610667227154384,
+      "result_consolidation": 0.5566061747413465,
+      "self_checking": 0.6210807036387532,
+      "uncertainty_management": 0.4865749397818878
+    },
+    "spread_of_category_mean_positions": 0.6010737200121521
+  },
+  "variance": {
+    "r2_position_only": 0.026825858288235027,
+    "r2_category_only": 0.013653561649085377,
+    "r2_both": 0.03933933119985389,
+    "category_unique": 0.012513472911618861,
+    "position_unique": 0.02568576955076851,
+    "shared": 0.0011400887374665158
+  },
+  "ranking": {
+    "raw_order": [
+      "uncertainty_management",
+      "plan_generation",
+      "fact_retrieval",
+      "problem_setup",
+      "active_computation",
+      "self_checking",
+      "result_consolidation",
+      "final_answer"
+    ],
+    "residual_order": [
+      "uncertainty_management",
+      "plan_generation",
+      "final_answer",
+      "self_checking",
+      "active_computation",
+      "fact_retrieval",
+      "problem_setup",
+      "result_consolidation"
+    ],
+    "rank_correlation": 0.4285714285714286,
+    "raw_means": {
+      "uncertainty_management": 0.09015975007069531,
+      "plan_generation": 0.08573579032079713,
+      "fact_retrieval": 0.08188608939302355,
+      "problem_setup": 0.06996722508597075,
+      "active_computation": 0.06805086966981531,
+      "self_checking": 0.06777588353558561,
+      "result_consolidation": 0.060134294356612564,
+      "final_answer": 0.059189735411672426
+    },
+    "residual_means": {
+      "uncertainty_management": 0.014771885967749148,
+      "plan_generation": 0.009890792855791506,
+      "final_answer": 0.008755109208664702,
+      "self_checking": 0.0037600522242207143,
+      "active_computation": -0.0023758525188969835,
+      "fact_retrieval": -0.004865475867996561,
+      "problem_setup": -0.01113114006606646,
+      "result_consolidation": -0.01175580058144899
+    },
+    "top_raw": [
+      "uncertainty_management",
+      "plan_generation",
+      "fact_retrieval"
+    ],
+    "top_residual": [
+      "uncertainty_management",
+      "plan_generation",
+      "final_answer"
+    ]
+  },
+  "filler_by_category": {
+    "active_computation": {
+      "n": 8,
+      "mean_real": 0.05520011729281685,
+      "mean_filler": 0.08806402300256257,
+      "gap": -0.032863905709745705,
+      "frac_real_exceeds": 0.25
+    },
+    "fact_retrieval": {
+      "n": 11,
+      "mean_real": 0.046637035698109126,
+      "mean_filler": 0.04041581127506465,
+      "gap": 0.006221224423044475,
+      "frac_real_exceeds": 0.36363636363636365
+    },
+    "final_answer": {
+      "n": 17,
+      "mean_real": 0.052226690696764125,
+      "mean_filler": 0.05769945104326936,
+      "gap": -0.005472760346505234,
+      "frac_real_exceeds": 0.23529411764705882
+    },
+    "plan_generation": {
+      "n": 13,
+      "mean_real": 0.06958888446017074,
+      "mean_filler": 0.06015010960412029,
+      "gap": 0.009438774856050464,
+      "frac_real_exceeds": 0.46153846153846156
+    },
+    "problem_setup": {
+      "n": 17,
+      "mean_real": 0.056270261678318265,
+      "mean_filler": 0.06639132954559163,
+      "gap": -0.010121067867273363,
+      "frac_real_exceeds": 0.23529411764705882
+    },
+    "result_consolidation": {
+      "n": 17,
+      "mean_real": 0.04309318037184357,
+      "mean_filler": 0.04174346721717043,
+      "gap": 0.001349713154673142,
+      "frac_real_exceeds": 0.29411764705882354
+    },
+    "self_checking": {
+      "n": 8,
+      "mean_real": 0.04117529753207483,
+      "mean_filler": 0.022500756022660974,
+      "gap": 0.018674541509413854,
+      "frac_real_exceeds": 0.375
+    },
+    "uncertainty_management": {
+      "n": 7,
+      "mean_real": 0.08771044321778802,
+      "mean_filler": 0.07413463137361476,
+      "gap": 0.01357581184417327,
+      "frac_real_exceeds": 0.42857142857142855
+    }
+  }
+}

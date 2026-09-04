@@ -1,0 +1,15 @@
+# Python 3.12. One H200-class GPU for the generation stages.
+#
+# vLLM serves every generation stage. The white-box stage (11_internals.py) needs
+# attention weights, which vLLM does not expose, so it runs under transformers
+# with attn_implementation="eager".
+vllm==0.27.1
+torch==2.13.0
+transformers>=4.57
+accelerate>=1.14
+datasets>=4.0
+sentence-transformers>=6.0
+numpy>=2.0
+pandas>=2.2
+scipy>=1.14
+matplotlib>=3.9

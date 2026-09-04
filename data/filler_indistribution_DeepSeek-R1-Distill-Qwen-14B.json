@@ -1,0 +1,975 @@
+{
+  "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
+  "n_slots": 120,
+  "mean_logp_real": -0.5292589028673386,
+  "mean_logp_filler": -4.719521719942047,
+  "mean_logp_alien": -6.959063712041344,
+  "sd_logp_real_across_sentences": 0.5506356340439637,
+  "gap_filler_minus_real": -4.190262817074708,
+  "gap_alien_minus_real": -6.429804809174006,
+  "filler_gap_in_sd": -7.609864959702464,
+  "alien_gap_in_sd": -11.677059041661368,
+  "frac_filler_more_likely_than_real": 0.0,
+  "rows": [
+    {
+      "trace_id": "test/prealgebra/1646.json#0",
+      "i": 90,
+      "position": 0.5617283950617284,
+      "logp_real": -0.09496934250568273,
+      "logp_filler": -4.906049045175314,
+      "logp_alien": -7.719004644366578
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1197.json#0",
+      "i": 15,
+      "position": 0.1,
+      "logp_real": -0.08337293725224208,
+      "logp_filler": -3.1471590239554645,
+      "logp_alien": -6.662533325384931
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 155,
+      "position": 0.7323943661971831,
+      "logp_real": -0.0008562809546328468,
+      "logp_filler": -5.629368777095806,
+      "logp_alien": -6.367738538282732
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 54,
+      "position": 0.25821596244131456,
+      "logp_real": -0.49654328187209035,
+      "logp_filler": -4.601726847887039,
+      "logp_alien": -7.116738154337589
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1388.json#0",
+      "i": 159,
+      "position": 0.9411764705882353,
+      "logp_real": -0.9687924427104603,
+      "logp_filler": -3.3136050671531847,
+      "logp_alien": -6.600428119113736
+    },
+    {
+      "trace_id": "test/number_theory/516.json#0",
+      "i": 85,
+      "position": 0.688,
+      "logp_real": -0.7500094807884342,
+      "logp_filler": -5.953408518534464,
+      "logp_alien": -7.039010433046524
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 34,
+      "position": 0.1643192488262911,
+      "logp_real": -0.4954192371004948,
+      "logp_filler": -3.9196712269913405,
+      "logp_alien": -7.563873465241088
+    },
+    {
+      "trace_id": "test/number_theory/516.json#0",
+      "i": 1,
+      "position": 0.016,
+      "logp_real": -0.12697621987382693,
+      "logp_filler": -3.6349541868354813,
+      "logp_alien": -6.571051530396709
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1388.json#0",
+      "i": 21,
+      "position": 0.12941176470588237,
+      "logp_real": -0.7599733210045675,
+      "logp_filler": -2.558604352734983,
+      "logp_alien": -7.0512908412716575
+    },
+    {
+      "trace_id": "test/prealgebra/1646.json#0",
+      "i": 96,
+      "position": 0.5987654320987654,
+      "logp_real": -0.20712667547105532,
+      "logp_filler": -3.9068599745631216,
+      "logp_alien": -6.754980901365413
+    },
+    {
+      "trace_id": "test/prealgebra/1646.json#0",
+      "i": 38,
+      "position": 0.24074074074074073,
+      "logp_real": -0.1870467817132401,
+      "logp_filler": -5.405824983758586,
+      "logp_alien": -6.463750819102328
+    },
+    {
+      "trace_id": "test/algebra/661.json#0",
+      "i": 109,
+      "position": 0.9401709401709402,
+      "logp_real": -0.37179809179188467,
+      "logp_filler": -8.81701209147771,
+      "logp_alien": -7.849258373276441
+    },
+    {
+      "trace_id": "test/prealgebra/1761.json#0",
+      "i": 18,
+      "position": 0.27941176470588236,
+      "logp_real": -0.11571374970298764,
+      "logp_filler": -3.275815185904503,
+      "logp_alien": -6.642343170224474
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1197.json#0",
+      "i": 21,
+      "position": 0.1375,
+      "logp_real": -0.10193657154153944,
+      "logp_filler": -3.6816011376678945,
+      "logp_alien": -7.563376338435983
+    },
+    {
+      "trace_id": "test/number_theory/516.json#0",
+      "i": 90,
+      "position": 0.728,
+      "logp_real": -0.18701187163576377,
+      "logp_filler": -3.7844209879636765,
+      "logp_alien": -6.465063563333099
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 36,
+      "position": 0.17370892018779344,
+      "logp_real": -0.4481194043990829,
+      "logp_filler": -3.737516338378191,
+      "logp_alien": -7.238528499809193
+    },
+    {
+      "trace_id": "test/prealgebra/1646.json#0",
+      "i": 67,
+      "position": 0.41975308641975306,
+      "logp_real": -0.2380724321812198,
+      "logp_filler": -4.970046655585368,
+      "logp_alien": -6.518117171711958
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1197.json#0",
+      "i": 155,
+      "position": 0.975,
+      "logp_real": -0.27932075291326797,
+      "logp_filler": -5.095639797276615,
+      "logp_alien": -7.5531140780717925
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 23,
+      "position": 0.11267605633802817,
+      "logp_real": -0.5019696348530931,
+      "logp_filler": -5.6683739302513585,
+      "logp_alien": -7.637730062290757
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1197.json#0",
+      "i": 152,
+      "position": 0.95625,
+      "logp_real": -0.5693415928175855,
+      "logp_filler": -6.893755335959473,
+      "logp_alien": -7.567012640570493
+    },
+    {
+      "trace_id": "test/prealgebra/1646.json#0",
+      "i": 104,
+      "position": 0.6481481481481481,
+      "logp_real": -0.4604343502700679,
+      "logp_filler": -7.463628323083477,
+      "logp_alien": -7.386400724116181
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 69,
+      "position": 0.3286384976525822,
+      "logp_real": -0.26113463340393145,
+      "logp_filler": -4.239604875445366,
+      "logp_alien": -7.213868102488084
+    },
+    {
+      "trace_id": "test/algebra/661.json#0",
+      "i": 28,
+      "position": 0.24786324786324787,
+      "logp_real": -0.5629971471428368,
+      "logp_filler": -5.182837408889706,
+      "logp_alien": -6.70570408610197
+    },
+    {
+      "trace_id": "test/number_theory/516.json#0",
+      "i": 105,
+      "position": 0.848,
+      "logp_real": -0.9297151581510358,
+      "logp_filler": -3.6476369708776475,
+      "logp_alien": -6.45037642264595
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 58,
+      "position": 0.27699530516431925,
+      "logp_real": -0.46290341345388664,
+      "logp_filler": -4.702205584927772,
+      "logp_alien": -6.723128209892891
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1197.json#0",
+      "i": 50,
+      "position": 0.31875,
+      "logp_real": -1.0817896095769746,
+      "logp_filler": -4.537945539823601,
+      "logp_alien": -7.511569471026143
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 43,
+      "position": 0.20657276995305165,
+      "logp_real": -0.6607715022364411,
+      "logp_filler": -6.365190814559658,
+      "logp_alien": -7.30463125742783
+    },
+    {
+      "trace_id": "test/prealgebra/1646.json#0",
+      "i": 15,
+      "position": 0.09876543209876543,
+      "logp_real": -0.9859677062666057,
+      "logp_filler": -2.7895928762853144,
+      "logp_alien": -6.435284718727832
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1388.json#0",
+      "i": 157,
+      "position": 0.9294117647058824,
+      "logp_real": -0.6976479490588796,
+      "logp_filler": -4.82087788109978,
+      "logp_alien": -6.933434732186679
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 204,
+      "position": 0.9624413145539906,
+      "logp_real": -0.1346701318788501,
+      "logp_filler": -4.472495453804731,
+      "logp_alien": -6.601876665765618
+    },
+    {
+      "trace_id": "test/number_theory/516.json#0",
+      "i": 122,
+      "position": 0.984,
+      "logp_real": -0.9298153460025788,
+      "logp_filler": -4.768243633199518,
+      "logp_alien": -6.057994950096925
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1388.json#0",
+      "i": 22,
+      "position": 0.13529411764705881,
+      "logp_real": -0.3681067212355629,
+      "logp_filler": -4.238172092785438,
+      "logp_alien": -6.538541065276989
+    },
+    {
+      "trace_id": "test/number_theory/516.json#0",
+      "i": 58,
+      "position": 0.472,
+      "logp_real": -0.3687290385927814,
+      "logp_filler": -4.8102874566490454,
+      "logp_alien": -7.491331861569329
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 66,
+      "position": 0.3145539906103286,
+      "logp_real": -0.46443374022773015,
+      "logp_filler": -3.805393326282501,
+      "logp_alien": -7.619262709066368
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 192,
+      "position": 0.9061032863849765,
+      "logp_real": -0.14678987007950026,
+      "logp_filler": -5.147140872478485,
+      "logp_alien": -6.865428377801331
+    },
+    {
+      "trace_id": "test/algebra/661.json#0",
+      "i": 65,
+      "position": 0.5641025641025641,
+      "logp_real": -0.5038519613901009,
+      "logp_filler": -6.929913501779083,
+      "logp_alien": -7.097962372291542
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1197.json#0",
+      "i": 79,
+      "position": 0.5,
+      "logp_real": -0.0004584260386053529,
+      "logp_filler": -5.325788936976584,
+      "logp_alien": -7.221900909606664
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 158,
+      "position": 0.7464788732394366,
+      "logp_real": -1.3947080639693468,
+      "logp_filler": -6.963105136694919,
+      "logp_alien": -7.085016832471026
+    },
+    {
+      "trace_id": "test/algebra/661.json#0",
+      "i": 18,
+      "position": 0.1623931623931624,
+      "logp_real": -0.49376945197582245,
+      "logp_filler": -2.3509913661313475,
+      "logp_alien": -6.626940754672078
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 117,
+      "position": 0.5539906103286385,
+      "logp_real": -0.5801777568431448,
+      "logp_filler": -4.7122989892959595,
+      "logp_alien": -6.942298815800471
+    },
+    {
+      "trace_id": "test/prealgebra/1646.json#0",
+      "i": 120,
+      "position": 0.7469135802469136,
+      "logp_real": -0.496229443406565,
+      "logp_filler": -2.837503418698907,
+      "logp_alien": -7.408469958057769
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1388.json#0",
+      "i": 55,
+      "position": 0.32941176470588235,
+      "logp_real": -0.043769921693500406,
+      "logp_filler": -5.422455611250673,
+      "logp_alien": -6.848121074529497
+    },
+    {
+      "trace_id": "test/algebra/661.json#0",
+      "i": 85,
+      "position": 0.7350427350427351,
+      "logp_real": -0.25254251055454774,
+      "logp_filler": -6.181143396844466,
+      "logp_alien": -7.5819549159361745
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 41,
+      "position": 0.19718309859154928,
+      "logp_real": -2.1566476080566646,
+      "logp_filler": -4.662102729115369,
+      "logp_alien": -7.533327402975059
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1388.json#0",
+      "i": 5,
+      "position": 0.03529411764705882,
+      "logp_real": -0.2775898130923286,
+      "logp_filler": -5.786877533030098,
+      "logp_alien": -6.845189179365407
+    },
+    {
+      "trace_id": "test/algebra/661.json#0",
+      "i": 53,
+      "position": 0.46153846153846156,
+      "logp_real": -0.5130582239977756,
+      "logp_filler": -6.371977311866691,
+      "logp_alien": -6.189997408252494
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1388.json#0",
+      "i": 108,
+      "position": 0.6411764705882353,
+      "logp_real": -0.3334441627397744,
+      "logp_filler": -3.9934590594335035,
+      "logp_alien": -6.312836135069444
+    },
+    {
+      "trace_id": "test/prealgebra/1761.json#0",
+      "i": 32,
+      "position": 0.4852941176470588,
+      "logp_real": -0.3085633390023409,
+      "logp_filler": -3.7868472583223984,
+      "logp_alien": -6.031586481231406
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1388.json#0",
+      "i": 100,
+      "position": 0.5941176470588235,
+      "logp_real": -0.6288636605569877,
+      "logp_filler": -4.1247252114117146,
+      "logp_alien": -6.4761635503515524
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1197.json#0",
+      "i": 146,
+      "position": 0.91875,
+      "logp_real": -0.3657958802877046,
+      "logp_filler": -5.329200751015117,
+      "logp_alien": -7.477261745048535
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1388.json#0",
+      "i": 12,
+      "position": 0.07647058823529412,
+      "logp_real": -0.14951219162844093,
+      "logp_filler": -3.4408313010353595,
+      "logp_alien": -6.776447688300498
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1388.json#0",
+      "i": 126,
+      "position": 0.7470588235294118,
+      "logp_real": -0.3950986335502551,
+      "logp_filler": -3.8527126625180244,
+      "logp_alien": -6.307236748530368
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 127,
+      "position": 0.6009389671361502,
+      "logp_real": -0.6443830370971853,
+      "logp_filler": -5.228593128849752,
+      "logp_alien": -7.296271269136503
+    },
+    {
+      "trace_id": "test/prealgebra/1646.json#0",
+      "i": 149,
+      "position": 0.9259259259259259,
+      "logp_real": -0.24163093344645017,
+      "logp_filler": -5.086606399803713,
+      "logp_alien": -7.205187601914251
+    },
+    {
+      "trace_id": "test/prealgebra/1646.json#0",
+      "i": 87,
+      "position": 0.5432098765432098,
+      "logp_real": -0.18325478820561103,
+      "logp_filler": -4.955789810419082,
+      "logp_alien": -7.4850321354764535
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1197.json#0",
+      "i": 68,
+      "position": 0.43125,
+      "logp_real": -0.4608753999539961,
+      "logp_filler": -3.5188413203826974,
+      "logp_alien": -7.315817170991347
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1197.json#0",
+      "i": 139,
+      "position": 0.875,
+      "logp_real": -0.36252734368458206,
+      "logp_filler": -6.490234925130305,
+      "logp_alien": -7.28886851553716
+    },
+    {
+      "trace_id": "test/prealgebra/1646.json#0",
+      "i": 68,
+      "position": 0.42592592592592593,
+      "logp_real": -0.3299223938503687,
+      "logp_filler": -4.876417427889204,
+      "logp_alien": -6.369641160726622
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 101,
+      "position": 0.4788732394366197,
+      "logp_real": -2.0024310756997954,
+      "logp_filler": -4.838313344960625,
+      "logp_alien": -6.995967805917546
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1197.json#0",
+      "i": 80,
+      "position": 0.50625,
+      "logp_real": -0.0001766850648361462,
+      "logp_filler": -4.912969358265357,
+      "logp_alien": -6.960360148788441
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1197.json#0",
+      "i": 62,
+      "position": 0.39375,
+      "logp_real": -0.09267917300852262,
+      "logp_filler": -5.4957716365877,
+      "logp_alien": -7.35110628346958
+    },
+    {
+      "trace_id": "test/algebra/661.json#0",
+      "i": 82,
+      "position": 0.7094017094017094,
+      "logp_real": -0.2974223326711917,
+      "logp_filler": -4.507116541266441,
+      "logp_alien": -7.32739250949355
+    },
+    {
+      "trace_id": "test/counting_and_probability/134.json#0",
+      "i": 30,
+      "position": 0.9393939393939394,
+      "logp_real": -0.46839197322858794,
+      "logp_filler": -3.3696065180934966,
+      "logp_alien": -6.66253353146692
+    },
+    {
+      "trace_id": "test/prealgebra/1646.json#0",
+      "i": 85,
+      "position": 0.5308641975308642,
+      "logp_real": -1.0531824712557452,
+      "logp_filler": -4.940053936094046,
+      "logp_alien": -7.287945263675003
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 31,
+      "position": 0.15023474178403756,
+      "logp_real": -0.2517740305615763,
+      "logp_filler": -5.686720649090906,
+      "logp_alien": -7.28358847132047
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 82,
+      "position": 0.38967136150234744,
+      "logp_real": -0.09833581562875038,
+      "logp_filler": -4.739407109096646,
+      "logp_alien": -7.159281743075553
+    },
+    {
+      "trace_id": "test/number_theory/516.json#0",
+      "i": 59,
+      "position": 0.48,
+      "logp_real": -0.5240385720648751,
+      "logp_filler": -6.420404791470252,
+      "logp_alien": -7.68502204922529
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 111,
+      "position": 0.5258215962441315,
+      "logp_real": -0.4157130927879376,
+      "logp_filler": -4.516983178257942,
+      "logp_alien": -7.246345964750687
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 129,
+      "position": 0.6103286384976526,
+      "logp_real": -0.5386602350421832,
+      "logp_filler": -4.434155529737472,
+      "logp_alien": -7.289347644603297
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1388.json#0",
+      "i": 39,
+      "position": 0.23529411764705882,
+      "logp_real": -1.3796989172697067,
+      "logp_filler": -3.068516643209891,
+      "logp_alien": -6.636341584579441
+    },
+    {
+      "trace_id": "test/counting_and_probability/134.json#0",
+      "i": 23,
+      "position": 0.7272727272727273,
+      "logp_real": -0.5825978478256145,
+      "logp_filler": -4.945362609831916,
+      "logp_alien": -6.866707790768339
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1197.json#0",
+      "i": 58,
+      "position": 0.36875,
+      "logp_real": -1.3788225129246712,
+      "logp_filler": -4.936851097891728,
+      "logp_alien": -7.6182067488805565
+    },
+    {
+      "trace_id": "test/prealgebra/1761.json#0",
+      "i": 30,
+      "position": 0.45588235294117646,
+      "logp_real": -0.09877983849734061,
+      "logp_filler": -3.9595833867788315,
+      "logp_alien": -6.756617655834324
+    },
+    {
+      "trace_id": "test/prealgebra/1646.json#0",
+      "i": 4,
+      "position": 0.030864197530864196,
+      "logp_real": -0.08373852565951591,
+      "logp_filler": -4.643918934122969,
+      "logp_alien": -5.916843288721369
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1388.json#0",
+      "i": 91,
+      "position": 0.5411764705882353,
+      "logp_real": -0.7200481956867536,
+      "logp_filler": -4.39301283719639,
+      "logp_alien": -6.542129217431606
+    },
+    {
+      "trace_id": "test/prealgebra/1646.json#0",
+      "i": 64,
+      "position": 0.4012345679012346,
+      "logp_real": -0.2451011692206563,
+      "logp_filler": -4.888741837193568,
+      "logp_alien": -6.753675100536777
+    },
+    {
+      "trace_id": "test/prealgebra/1646.json#0",
+      "i": 116,
+      "position": 0.7222222222222222,
+      "logp_real": -0.6058328264731575,
+      "logp_filler": -5.225551707323445,
+      "logp_alien": -6.993345043191416
+    },
+    {
+      "trace_id": "test/prealgebra/1761.json#0",
+      "i": 16,
+      "position": 0.25,
+      "logp_real": -0.447017090941238,
+      "logp_filler": -3.5881103479187004,
+      "logp_alien": -6.714695878900012
+    },
+    {
+      "trace_id": "test/number_theory/516.json#0",
+      "i": 8,
+      "position": 0.072,
+      "logp_real": -0.1413547311175957,
+      "logp_filler": -5.1821250534495835,
+      "logp_alien": -7.1614900185511665
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 70,
+      "position": 0.3333333333333333,
+      "logp_real": -3.103741476658115,
+      "logp_filler": -5.404240173132469,
+      "logp_alien": -7.324608397024419
+    },
+    {
+      "trace_id": "test/prealgebra/1646.json#0",
+      "i": 98,
+      "position": 0.6111111111111112,
+      "logp_real": -0.16566579425746772,
+      "logp_filler": -6.445440649824637,
+      "logp_alien": -7.202228613280988
+    },
+    {
+      "trace_id": "test/number_theory/516.json#0",
+      "i": 14,
+      "position": 0.12,
+      "logp_real": -0.10220790009142247,
+      "logp_filler": -4.252256392102156,
+      "logp_alien": -7.189420023503209
+    },
+    {
+      "trace_id": "test/prealgebra/1646.json#0",
+      "i": 137,
+      "position": 0.8518518518518519,
+      "logp_real": -0.7786747980856035,
+      "logp_filler": -7.023006139057023,
+      "logp_alien": -7.536433743976536
+    },
+    {
+      "trace_id": "test/algebra/661.json#0",
+      "i": 71,
+      "position": 0.6153846153846154,
+      "logp_real": -0.7231796618449152,
+      "logp_filler": -5.029212294765914,
+      "logp_alien": -7.235256880378492
+    },
+    {
+      "trace_id": "test/prealgebra/1646.json#0",
+      "i": 6,
+      "position": 0.043209876543209874,
+      "logp_real": -0.6176309533639294,
+      "logp_filler": -2.8823336163535713,
+      "logp_alien": -6.048068569829831
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 57,
+      "position": 0.27230046948356806,
+      "logp_real": -2.2968290602350407,
+      "logp_filler": -3.3677220374345778,
+      "logp_alien": -7.410412843409526
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1197.json#0",
+      "i": 132,
+      "position": 0.83125,
+      "logp_real": -2.0836815188328424,
+      "logp_filler": -4.244569878635593,
+      "logp_alien": -7.5002809052229376
+    },
+    {
+      "trace_id": "test/algebra/661.json#0",
+      "i": 61,
+      "position": 0.5299145299145299,
+      "logp_real": -0.16519931521386783,
+      "logp_filler": -6.435054098566373,
+      "logp_alien": -6.937384837862243
+    },
+    {
+      "trace_id": "test/algebra/661.json#0",
+      "i": 48,
+      "position": 0.4188034188034188,
+      "logp_real": -0.4409193250277158,
+      "logp_filler": -1.6572956699412316,
+      "logp_alien": -6.381720769505659
+    },
+    {
+      "trace_id": "test/algebra/661.json#0",
+      "i": 16,
+      "position": 0.1452991452991453,
+      "logp_real": -0.2505056201449918,
+      "logp_filler": -5.6388491091105,
+      "logp_alien": -6.9549949169158936
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 80,
+      "position": 0.38028169014084506,
+      "logp_real": -0.2751716487704092,
+      "logp_filler": -5.143097783726262,
+      "logp_alien": -7.495080454417278
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1388.json#0",
+      "i": 78,
+      "position": 0.4647058823529412,
+      "logp_real": -0.03500728126431504,
+      "logp_filler": -4.472838696837425,
+      "logp_alien": -6.835941663148333
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 211,
+      "position": 0.9953051643192489,
+      "logp_real": -0.32409933742701874,
+      "logp_filler": -4.539340063308676,
+      "logp_alien": -6.309936906998596
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1197.json#0",
+      "i": 127,
+      "position": 0.8,
+      "logp_real": -0.22141266533839982,
+      "logp_filler": -6.2188605233426415,
+      "logp_alien": -7.711080178601727
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1197.json#0",
+      "i": 26,
+      "position": 0.16875,
+      "logp_real": -0.29816094988977554,
+      "logp_filler": -4.16676145405758,
+      "logp_alien": -7.097986257203187
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1197.json#0",
+      "i": 78,
+      "position": 0.49375,
+      "logp_real": -0.010039742619370648,
+      "logp_filler": -3.7658730880626865,
+      "logp_alien": -7.34724633021928
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1388.json#0",
+      "i": 35,
+      "position": 0.21176470588235294,
+      "logp_real": -0.09965739094925849,
+      "logp_filler": -5.231777812703513,
+      "logp_alien": -6.562830526913542
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 180,
+      "position": 0.8497652582159625,
+      "logp_real": -0.3472244308011208,
+      "logp_filler": -4.59897233247757,
+      "logp_alien": -7.528570692984466
+    },
+    {
+      "trace_id": "test/algebra/661.json#0",
+      "i": 47,
+      "position": 0.41025641025641024,
+      "logp_real": -0.3042666327932011,
+      "logp_filler": -5.6995631099146395,
+      "logp_alien": -6.449179529857177
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 2,
+      "position": 0.014084507042253521,
+      "logp_real": -0.4326341532018267,
+      "logp_filler": -4.562633017227719,
+      "logp_alien": -6.940486115904942
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1388.json#0",
+      "i": 59,
+      "position": 0.35294117647058826,
+      "logp_real": -1.047984755701489,
+      "logp_filler": -4.74064069015107,
+      "logp_alien": -7.40015351399775
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1197.json#0",
+      "i": 109,
+      "position": 0.6875,
+      "logp_real": -0.5239692559952288,
+      "logp_filler": -4.919795947770278,
+      "logp_alien": -7.861151294753374
+    },
+    {
+      "trace_id": "test/number_theory/516.json#0",
+      "i": 55,
+      "position": 0.448,
+      "logp_real": -0.34548351694118434,
+      "logp_filler": -4.496938869357109,
+      "logp_alien": -6.802096335790474
+    },
+    {
+      "trace_id": "test/prealgebra/1761.json#0",
+      "i": 61,
+      "position": 0.9117647058823529,
+      "logp_real": -0.4400977377567652,
+      "logp_filler": -5.07007256092038,
+      "logp_alien": -6.100731699870751
+    },
+    {
+      "trace_id": "test/number_theory/516.json#0",
+      "i": 31,
+      "position": 0.256,
+      "logp_real": -2.741803438003184e-06,
+      "logp_filler": -5.312010829231844,
+      "logp_alien": -5.861206690469604
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 173,
+      "position": 0.8169014084507042,
+      "logp_real": -0.5526869572234454,
+      "logp_filler": -6.729744592881096,
+      "logp_alien": -7.500565439461332
+    },
+    {
+      "trace_id": "test/algebra/661.json#0",
+      "i": 8,
+      "position": 0.07692307692307693,
+      "logp_real": -0.28870209433606203,
+      "logp_filler": -3.8436260063676206,
+      "logp_alien": -6.3148890044898325
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 72,
+      "position": 0.3427230046948357,
+      "logp_real": -2.975820659654346,
+      "logp_filler": -5.077979263663292,
+      "logp_alien": -7.0805576122718845
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1388.json#0",
+      "i": 11,
+      "position": 0.07058823529411765,
+      "logp_real": -0.4203677587211132,
+      "logp_filler": -4.304496453210179,
+      "logp_alien": -7.4147627055644945
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1388.json#0",
+      "i": 8,
+      "position": 0.052941176470588235,
+      "logp_real": -0.08269413888620665,
+      "logp_filler": -5.182279663412893,
+      "logp_alien": -6.762924703840659
+    },
+    {
+      "trace_id": "test/intermediate_algebra/956.json#0",
+      "i": 91,
+      "position": 0.431924882629108,
+      "logp_real": -0.8758394552128438,
+      "logp_filler": -5.592652943218127,
+      "logp_alien": -7.670764527639431
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1388.json#0",
+      "i": 60,
+      "position": 0.3588235294117647,
+      "logp_real": -0.7861524230459054,
+      "logp_filler": -3.207918405532837,
+      "logp_alien": -6.7848138258997235
+    },
+    {
+      "trace_id": "test/prealgebra/1646.json#0",
+      "i": 13,
+      "position": 0.08641975308641975,
+      "logp_real": -0.3132664311839445,
+      "logp_filler": -3.296047535414497,
+      "logp_alien": -6.090788541648242
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1388.json#0",
+      "i": 70,
+      "position": 0.4176470588235294,
+      "logp_real": -1.734931264428451,
+      "logp_filler": -5.226211496495774,
+      "logp_alien": -6.777275462102255
+    },
+    {
+      "trace_id": "test/prealgebra/1646.json#0",
+      "i": 32,
+      "position": 0.2037037037037037,
+      "logp_real": -0.17645165180932623,
+      "logp_filler": -4.244877262972295,
+      "logp_alien": -6.444436943588278
+    },
+    {
+      "trace_id": "test/intermediate_algebra/1388.json#0",
+      "i": 19,
+      "position": 0.11764705882352941,
+      "logp_real": -0.7234283871948719,
+      "logp_filler": -4.746926551684737,
+      "logp_alien": -6.467934025773467
+    },
+    {
+      "trace_id": "test/prealgebra/1646.json#0",
+      "i": 73,
+      "position": 0.4567901234567901,
+      "logp_real": -0.6990670718252658,
+      "logp_filler": -4.645468560357888,
+      "logp_alien": -6.847987772520766
+    },
+    {
+      "trace_id": "test/algebra/661.json#0",
+      "i": 12,
+      "position": 0.1111111111111111,
+      "logp_real": -0.03639402839426111,
+      "logp_filler": -3.1194205142557623,
+      "logp_alien": -6.469227107241741
+    },
+    {
+      "trace_id": "test/prealgebra/1761.json#0",
+      "i": 36,
+      "position": 0.5441176470588235,
+      "logp_real": -0.2653868298061766,
+      "logp_filler": -3.158312086760998,
+      "logp_alien": -6.6199460682580025
+    },
+    {
+      "trace_id": "test/counting_and_probability/134.json#0",
+      "i": 0,
+      "position": 0.030303030303030304,
+      "logp_real": -0.10368304903652072,
+      "logp_filler": -3.833127407729626,
+      "logp_alien": -6.100031419343742
+    }
+  ]
+}

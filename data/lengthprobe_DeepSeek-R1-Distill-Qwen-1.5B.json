@@ -1,0 +1,3542 @@
+[
+  {
+    "pid": "test/intermediate_algebra/1994.json",
+    "level": 5,
+    "gold": "p-q",
+    "samples": [
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 299,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 3496,
+        "n_sent": 132,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 307,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 4942,
+        "n_sent": 173,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 307,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 299,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 303,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 315,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.25,
+    "pass_rate": 0.25,
+    "median_tok": 8192.0,
+    "median_sent": 301.0
+  },
+  {
+    "pid": "test/precalculus/927.json",
+    "level": 4,
+    "gold": "90^\\circ",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 3764,
+        "n_sent": 185,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 2188,
+        "n_sent": 86,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 2116,
+        "n_sent": 117,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 2732,
+        "n_sent": 149,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 5817,
+        "n_sent": 303,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 1626,
+        "n_sent": 90,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 405,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 3795,
+        "n_sent": 191,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.875,
+    "pass_rate": 0.0,
+    "median_tok": 3248.0,
+    "median_sent": 167.0
+  },
+  {
+    "pid": "test/prealgebra/1139.json",
+    "level": 5,
+    "gold": "4",
+    "samples": [
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 332,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 332,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 376,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 339,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 381,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 377,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 387,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 320,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.0,
+    "pass_rate": 0.0,
+    "median_tok": 8192.0,
+    "median_sent": 357.5
+  },
+  {
+    "pid": "test/intermediate_algebra/1197.json",
+    "level": 5,
+    "gold": "3/56",
+    "samples": [
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 308,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 273,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 270,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 212,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 326,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 329,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 7706,
+        "n_sent": 296,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1896,
+        "n_sent": 74,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.25,
+    "pass_rate": 0.125,
+    "median_tok": 8192.0,
+    "median_sent": 284.5
+  },
+  {
+    "pid": "test/number_theory/737.json",
+    "level": 5,
+    "gold": "284",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 1460,
+        "n_sent": 79,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 2893,
+        "n_sent": 153,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2280,
+        "n_sent": 113,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2105,
+        "n_sent": 102,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1123,
+        "n_sent": 61,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 1792,
+        "n_sent": 94,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2405,
+        "n_sent": 122,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1984,
+        "n_sent": 85,
+        "correct": true
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 0.75,
+    "median_tok": 2044.5,
+    "median_sent": 98.0
+  },
+  {
+    "pid": "test/precalculus/990.json",
+    "level": 5,
+    "gold": "6-5i",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 2527,
+        "n_sent": 128,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 3394,
+        "n_sent": 116,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 4349,
+        "n_sent": 218,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1945,
+        "n_sent": 80,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 7175,
+        "n_sent": 268,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 4966,
+        "n_sent": 204,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 5066,
+        "n_sent": 198,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 3773,
+        "n_sent": 152,
+        "correct": true
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 1.0,
+    "median_tok": 4061.0,
+    "median_sent": 175.0
+  },
+  {
+    "pid": "test/precalculus/1199.json",
+    "level": 4,
+    "gold": "\\pi",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 5788,
+        "n_sent": 193,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 3679,
+        "n_sent": 140,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 326,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 3854,
+        "n_sent": 148,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 6259,
+        "n_sent": 238,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 6150,
+        "n_sent": 207,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 6601,
+        "n_sent": 245,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 6488,
+        "n_sent": 303,
+        "correct": true
+      }
+    ],
+    "closed_rate": 0.875,
+    "pass_rate": 0.875,
+    "median_tok": 6204.5,
+    "median_sent": 222.5
+  },
+  {
+    "pid": "test/algebra/1837.json",
+    "level": 5,
+    "gold": "5",
+    "samples": [
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 410,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 3063,
+        "n_sent": 165,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 4013,
+        "n_sent": 186,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 2158,
+        "n_sent": 102,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 418,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 392,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 1239,
+        "n_sent": 71,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 5671,
+        "n_sent": 270,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.625,
+    "pass_rate": 0.375,
+    "median_tok": 4842.0,
+    "median_sent": 228.0
+  },
+  {
+    "pid": "test/algebra/2193.json",
+    "level": 5,
+    "gold": "x=5",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 2456,
+        "n_sent": 137,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 1443,
+        "n_sent": 85,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 2569,
+        "n_sent": 139,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 1332,
+        "n_sent": 72,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 1254,
+        "n_sent": 81,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 1452,
+        "n_sent": 67,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 1338,
+        "n_sent": 76,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 2167,
+        "n_sent": 116,
+        "correct": false
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 0.0,
+    "median_tok": 1447.5,
+    "median_sent": 83.0
+  },
+  {
+    "pid": "test/algebra/2427.json",
+    "level": 5,
+    "gold": "10",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 2083,
+        "n_sent": 101,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2901,
+        "n_sent": 110,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 5519,
+        "n_sent": 252,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 4274,
+        "n_sent": 202,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 351,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 2314,
+        "n_sent": 120,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1954,
+        "n_sent": 100,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 5123,
+        "n_sent": 226,
+        "correct": true
+      }
+    ],
+    "closed_rate": 0.875,
+    "pass_rate": 0.875,
+    "median_tok": 3587.5,
+    "median_sent": 161.0
+  },
+  {
+    "pid": "test/intermediate_algebra/1388.json",
+    "level": 5,
+    "gold": "1,-2",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 4165,
+        "n_sent": 179,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 5002,
+        "n_sent": 192,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 2911,
+        "n_sent": 137,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 2780,
+        "n_sent": 103,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 3718,
+        "n_sent": 191,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 2868,
+        "n_sent": 146,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 3582,
+        "n_sent": 181,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 1851,
+        "n_sent": 97,
+        "correct": false
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 0.0,
+    "median_tok": 3246.5,
+    "median_sent": 162.5
+  },
+  {
+    "pid": "test/counting_and_probability/525.json",
+    "level": 5,
+    "gold": "144",
+    "samples": [
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 366,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 6962,
+        "n_sent": 319,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 366,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 399,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 7608,
+        "n_sent": 348,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 389,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 354,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 394,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.25,
+    "pass_rate": 0.0,
+    "median_tok": 8192.0,
+    "median_sent": 366.0
+  },
+  {
+    "pid": "test/prealgebra/1302.json",
+    "level": 4,
+    "gold": "11\\sqrt2",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 797,
+        "n_sent": 39,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 1142,
+        "n_sent": 54,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 724,
+        "n_sent": 39,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 1039,
+        "n_sent": 49,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 1172,
+        "n_sent": 57,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 979,
+        "n_sent": 55,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 716,
+        "n_sent": 35,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 1450,
+        "n_sent": 71,
+        "correct": false
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 0.0,
+    "median_tok": 1009.0,
+    "median_sent": 51.5
+  },
+  {
+    "pid": "test/counting_and_probability/134.json",
+    "level": 4,
+    "gold": "720",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 7110,
+        "n_sent": 362,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 427,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 6067,
+        "n_sent": 299,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 428,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 6320,
+        "n_sent": 349,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 375,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 417,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 6491,
+        "n_sent": 314,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.5,
+    "pass_rate": 0.25,
+    "median_tok": 7651.0,
+    "median_sent": 368.5
+  },
+  {
+    "pid": "test/algebra/1072.json",
+    "level": 4,
+    "gold": "243/625",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 2526,
+        "n_sent": 120,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2374,
+        "n_sent": 113,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 3754,
+        "n_sent": 187,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1986,
+        "n_sent": 98,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2944,
+        "n_sent": 135,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1678,
+        "n_sent": 82,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2688,
+        "n_sent": 130,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2994,
+        "n_sent": 166,
+        "correct": true
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 1.0,
+    "median_tok": 2607.0,
+    "median_sent": 125.0
+  },
+  {
+    "pid": "test/counting_and_probability/119.json",
+    "level": 4,
+    "gold": "-125",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 1726,
+        "n_sent": 69,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2145,
+        "n_sent": 103,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2633,
+        "n_sent": 104,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1423,
+        "n_sent": 72,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 4025,
+        "n_sent": 150,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 3260,
+        "n_sent": 110,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2254,
+        "n_sent": 84,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1540,
+        "n_sent": 63,
+        "correct": true
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 1.0,
+    "median_tok": 2199.5,
+    "median_sent": 93.5
+  },
+  {
+    "pid": "test/geometry/627.json",
+    "level": 4,
+    "gold": "17",
+    "samples": [
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 468,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 3265,
+        "n_sent": 155,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 481,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 1941,
+        "n_sent": 94,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 423,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 443,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 425,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 5447,
+        "n_sent": 328,
+        "correct": true
+      }
+    ],
+    "closed_rate": 0.375,
+    "pass_rate": 0.375,
+    "median_tok": 8192.0,
+    "median_sent": 424.0
+  },
+  {
+    "pid": "test/intermediate_algebra/1454.json",
+    "level": 5,
+    "gold": "70\\sqrt{2}",
+    "samples": [
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 262,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 298,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 317,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 292,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 305,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 7708,
+        "n_sent": 298,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 335,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 329,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.125,
+    "pass_rate": 0.125,
+    "median_tok": 8192.0,
+    "median_sent": 301.5
+  },
+  {
+    "pid": "test/prealgebra/1558.json",
+    "level": 5,
+    "gold": "5/4",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 1451,
+        "n_sent": 76,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1505,
+        "n_sent": 77,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 669,
+        "n_sent": 42,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2071,
+        "n_sent": 109,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1188,
+        "n_sent": 68,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2212,
+        "n_sent": 114,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1261,
+        "n_sent": 74,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 3768,
+        "n_sent": 159,
+        "correct": false
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 0.875,
+    "median_tok": 1478.0,
+    "median_sent": 76.5
+  },
+  {
+    "pid": "test/algebra/305.json",
+    "level": 5,
+    "gold": "5",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 874,
+        "n_sent": 48,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1290,
+        "n_sent": 67,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 554,
+        "n_sent": 34,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 734,
+        "n_sent": 42,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 761,
+        "n_sent": 41,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 944,
+        "n_sent": 49,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 967,
+        "n_sent": 52,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1191,
+        "n_sent": 64,
+        "correct": true
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 1.0,
+    "median_tok": 909.0,
+    "median_sent": 48.5
+  },
+  {
+    "pid": "test/prealgebra/1388.json",
+    "level": 4,
+    "gold": "83",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 3200,
+        "n_sent": 183,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 449,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 1150,
+        "n_sent": 74,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1254,
+        "n_sent": 83,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1854,
+        "n_sent": 61,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2749,
+        "n_sent": 167,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 979,
+        "n_sent": 64,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2065,
+        "n_sent": 129,
+        "correct": true
+      }
+    ],
+    "closed_rate": 0.875,
+    "pass_rate": 0.875,
+    "median_tok": 1959.5,
+    "median_sent": 106.0
+  },
+  {
+    "pid": "test/number_theory/1055.json",
+    "level": 5,
+    "gold": "203",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 4507,
+        "n_sent": 252,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8193,
+        "n_sent": 350,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 6493,
+        "n_sent": 316,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 2375,
+        "n_sent": 131,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 3342,
+        "n_sent": 186,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 5218,
+        "n_sent": 282,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 4858,
+        "n_sent": 217,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 3386,
+        "n_sent": 178,
+        "correct": true
+      }
+    ],
+    "closed_rate": 0.875,
+    "pass_rate": 0.625,
+    "median_tok": 4682.5,
+    "median_sent": 234.5
+  },
+  {
+    "pid": "test/prealgebra/951.json",
+    "level": 5,
+    "gold": "12",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 1282,
+        "n_sent": 68,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1106,
+        "n_sent": 57,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2590,
+        "n_sent": 124,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2161,
+        "n_sent": 106,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 978,
+        "n_sent": 53,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1895,
+        "n_sent": 101,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2032,
+        "n_sent": 100,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1609,
+        "n_sent": 87,
+        "correct": true
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 1.0,
+    "median_tok": 1752.0,
+    "median_sent": 93.5
+  },
+  {
+    "pid": "test/algebra/187.json",
+    "level": 4,
+    "gold": "3",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 1652,
+        "n_sent": 89,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1221,
+        "n_sent": 45,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1478,
+        "n_sent": 51,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1695,
+        "n_sent": 65,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 882,
+        "n_sent": 45,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1339,
+        "n_sent": 66,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1991,
+        "n_sent": 66,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2000,
+        "n_sent": 69,
+        "correct": true
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 1.0,
+    "median_tok": 1565.0,
+    "median_sent": 65.5
+  },
+  {
+    "pid": "test/intermediate_algebra/956.json",
+    "level": 5,
+    "gold": "(6,31,-1)",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 3006,
+        "n_sent": 112,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 3506,
+        "n_sent": 138,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 3914,
+        "n_sent": 147,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 4191,
+        "n_sent": 191,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2549,
+        "n_sent": 92,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 343,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 4681,
+        "n_sent": 189,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 311,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.75,
+    "pass_rate": 0.75,
+    "median_tok": 4052.5,
+    "median_sent": 168.0
+  },
+  {
+    "pid": "test/precalculus/675.json",
+    "level": 5,
+    "gold": "4",
+    "samples": [
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 336,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 322,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 7747,
+        "n_sent": 296,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 3917,
+        "n_sent": 140,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 279,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 4460,
+        "n_sent": 161,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 5231,
+        "n_sent": 158,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2912,
+        "n_sent": 121,
+        "correct": true
+      }
+    ],
+    "closed_rate": 0.625,
+    "pass_rate": 0.625,
+    "median_tok": 6489.0,
+    "median_sent": 220.0
+  },
+  {
+    "pid": "test/intermediate_algebra/279.json",
+    "level": 5,
+    "gold": "10",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 7989,
+        "n_sent": 362,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 344,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 1741,
+        "n_sent": 70,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 4757,
+        "n_sent": 213,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1775,
+        "n_sent": 85,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 363,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 4439,
+        "n_sent": 185,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 4278,
+        "n_sent": 189,
+        "correct": true
+      }
+    ],
+    "closed_rate": 0.75,
+    "pass_rate": 0.75,
+    "median_tok": 4598.0,
+    "median_sent": 201.0
+  },
+  {
+    "pid": "test/precalculus/1146.json",
+    "level": 4,
+    "gold": "35/64",
+    "samples": [
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 236,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 5823,
+        "n_sent": 232,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 6646,
+        "n_sent": 245,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 290,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 277,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 296,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8193,
+        "n_sent": 308,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 288,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.25,
+    "pass_rate": 0.25,
+    "median_tok": 8192.0,
+    "median_sent": 282.5
+  },
+  {
+    "pid": "test/prealgebra/1233.json",
+    "level": 4,
+    "gold": "10",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 1166,
+        "n_sent": 64,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1822,
+        "n_sent": 89,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1515,
+        "n_sent": 79,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1730,
+        "n_sent": 90,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 3136,
+        "n_sent": 146,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2548,
+        "n_sent": 130,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1426,
+        "n_sent": 83,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2129,
+        "n_sent": 112,
+        "correct": true
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 1.0,
+    "median_tok": 1776.0,
+    "median_sent": 89.5
+  },
+  {
+    "pid": "test/precalculus/1313.json",
+    "level": 4,
+    "gold": "46",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 5570,
+        "n_sent": 180,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 329,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 1788,
+        "n_sent": 79,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 4358,
+        "n_sent": 203,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 5318,
+        "n_sent": 224,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 336,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 2871,
+        "n_sent": 118,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2885,
+        "n_sent": 122,
+        "correct": true
+      }
+    ],
+    "closed_rate": 0.75,
+    "pass_rate": 0.75,
+    "median_tok": 4838.0,
+    "median_sent": 191.5
+  },
+  {
+    "pid": "test/intermediate_algebra/207.json",
+    "level": 4,
+    "gold": "-1",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 2317,
+        "n_sent": 94,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 292,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 3067,
+        "n_sent": 114,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2598,
+        "n_sent": 121,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2193,
+        "n_sent": 82,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 273,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 2649,
+        "n_sent": 113,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2681,
+        "n_sent": 118,
+        "correct": true
+      }
+    ],
+    "closed_rate": 0.75,
+    "pass_rate": 0.75,
+    "median_tok": 2665.0,
+    "median_sent": 116.0
+  },
+  {
+    "pid": "test/number_theory/516.json",
+    "level": 4,
+    "gold": "2516_8",
+    "samples": [
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 366,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 336,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 430,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 7223,
+        "n_sent": 338,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 436,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 6851,
+        "n_sent": 298,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 5357,
+        "n_sent": 256,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 488,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.375,
+    "pass_rate": 0.125,
+    "median_tok": 8192.0,
+    "median_sent": 352.0
+  },
+  {
+    "pid": "test/algebra/2253.json",
+    "level": 4,
+    "gold": "\\frac{3\\sqrt{3}}{4}",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 764,
+        "n_sent": 42,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2501,
+        "n_sent": 120,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 584,
+        "n_sent": 39,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 700,
+        "n_sent": 39,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 690,
+        "n_sent": 38,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1236,
+        "n_sent": 70,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1230,
+        "n_sent": 55,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1158,
+        "n_sent": 62,
+        "correct": true
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 1.0,
+    "median_tok": 961.0,
+    "median_sent": 48.5
+  },
+  {
+    "pid": "test/counting_and_probability/1114.json",
+    "level": 4,
+    "gold": "11/36",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 1205,
+        "n_sent": 59,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1940,
+        "n_sent": 98,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1441,
+        "n_sent": 70,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2070,
+        "n_sent": 112,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2632,
+        "n_sent": 128,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2039,
+        "n_sent": 90,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2821,
+        "n_sent": 141,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1407,
+        "n_sent": 63,
+        "correct": true
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 1.0,
+    "median_tok": 1989.5,
+    "median_sent": 94.0
+  },
+  {
+    "pid": "test/intermediate_algebra/47.json",
+    "level": 4,
+    "gold": "(-2,1)",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 1463,
+        "n_sent": 85,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1833,
+        "n_sent": 89,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1577,
+        "n_sent": 83,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2100,
+        "n_sent": 109,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2676,
+        "n_sent": 147,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1601,
+        "n_sent": 94,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 3005,
+        "n_sent": 126,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1761,
+        "n_sent": 89,
+        "correct": true
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 1.0,
+    "median_tok": 1797.0,
+    "median_sent": 91.5
+  },
+  {
+    "pid": "test/intermediate_algebra/1849.json",
+    "level": 5,
+    "gold": "501",
+    "samples": [
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 374,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 348,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 312,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 367,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 365,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 290,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 351,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 371,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.0,
+    "pass_rate": 0.0,
+    "median_tok": 8192.0,
+    "median_sent": 358.0
+  },
+  {
+    "pid": "test/algebra/2700.json",
+    "level": 5,
+    "gold": "3/2",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 4569,
+        "n_sent": 206,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 3382,
+        "n_sent": 151,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 360,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 342,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 4518,
+        "n_sent": 166,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 6426,
+        "n_sent": 288,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 5820,
+        "n_sent": 250,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 377,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.625,
+    "pass_rate": 0.625,
+    "median_tok": 6123.0,
+    "median_sent": 269.0
+  },
+  {
+    "pid": "test/algebra/893.json",
+    "level": 4,
+    "gold": "-1",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 2149,
+        "n_sent": 114,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2167,
+        "n_sent": 133,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1859,
+        "n_sent": 119,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2304,
+        "n_sent": 131,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1798,
+        "n_sent": 112,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2113,
+        "n_sent": 125,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2237,
+        "n_sent": 120,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2041,
+        "n_sent": 128,
+        "correct": true
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 1.0,
+    "median_tok": 2131.0,
+    "median_sent": 122.5
+  },
+  {
+    "pid": "test/geometry/353.json",
+    "level": 4,
+    "gold": "\\sqrt{5}",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 1076,
+        "n_sent": 62,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 841,
+        "n_sent": 42,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 993,
+        "n_sent": 58,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 931,
+        "n_sent": 57,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 731,
+        "n_sent": 46,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 630,
+        "n_sent": 35,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 786,
+        "n_sent": 41,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1048,
+        "n_sent": 56,
+        "correct": true
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 1.0,
+    "median_tok": 886.0,
+    "median_sent": 51.0
+  },
+  {
+    "pid": "test/algebra/892.json",
+    "level": 5,
+    "gold": "2",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 6376,
+        "n_sent": 301,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 350,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 5328,
+        "n_sent": 197,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 322,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 4975,
+        "n_sent": 237,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 314,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 3483,
+        "n_sent": 156,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 5728,
+        "n_sent": 249,
+        "correct": true
+      }
+    ],
+    "closed_rate": 0.625,
+    "pass_rate": 0.625,
+    "median_tok": 6052.0,
+    "median_sent": 275.0
+  },
+  {
+    "pid": "test/number_theory/357.json",
+    "level": 4,
+    "gold": "21",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 2291,
+        "n_sent": 121,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2156,
+        "n_sent": 113,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2773,
+        "n_sent": 143,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2761,
+        "n_sent": 138,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 3512,
+        "n_sent": 175,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 4557,
+        "n_sent": 239,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2394,
+        "n_sent": 126,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 5646,
+        "n_sent": 299,
+        "correct": true
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 1.0,
+    "median_tok": 2767.0,
+    "median_sent": 140.5
+  },
+  {
+    "pid": "test/counting_and_probability/377.json",
+    "level": 4,
+    "gold": "448/15625",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 3797,
+        "n_sent": 191,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 3019,
+        "n_sent": 154,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 4529,
+        "n_sent": 217,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 3416,
+        "n_sent": 171,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2724,
+        "n_sent": 126,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2325,
+        "n_sent": 110,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2509,
+        "n_sent": 114,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 3114,
+        "n_sent": 152,
+        "correct": true
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 1.0,
+    "median_tok": 3066.5,
+    "median_sent": 153.0
+  },
+  {
+    "pid": "test/algebra/873.json",
+    "level": 4,
+    "gold": "33",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 1062,
+        "n_sent": 31,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1302,
+        "n_sent": 54,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1234,
+        "n_sent": 63,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1198,
+        "n_sent": 60,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1173,
+        "n_sent": 50,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1259,
+        "n_sent": 65,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 874,
+        "n_sent": 52,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1084,
+        "n_sent": 60,
+        "correct": true
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 1.0,
+    "median_tok": 1185.5,
+    "median_sent": 57.0
+  },
+  {
+    "pid": "test/prealgebra/1646.json",
+    "level": 5,
+    "gold": "80",
+    "samples": [
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 261,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 7952,
+        "n_sent": 316,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 393,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 5180,
+        "n_sent": 175,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 7961,
+        "n_sent": 302,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8190,
+        "n_sent": 311,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8182,
+        "n_sent": 356,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 315,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.375,
+    "pass_rate": 0.0,
+    "median_tok": 8186.0,
+    "median_sent": 313.0
+  },
+  {
+    "pid": "test/intermediate_algebra/662.json",
+    "level": 5,
+    "gold": "1\\pm\\sqrt{19}",
+    "samples": [
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 312,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 5151,
+        "n_sent": 226,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 359,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 365,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 348,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 360,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 350,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 387,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.125,
+    "pass_rate": 0.0,
+    "median_tok": 8192.0,
+    "median_sent": 354.5
+  },
+  {
+    "pid": "test/geometry/183.json",
+    "level": 5,
+    "gold": "145^\\circ",
+    "samples": [
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 392,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 389,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 257,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 350,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 299,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 405,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 250,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 418,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.0,
+    "pass_rate": 0.0,
+    "median_tok": 8192.0,
+    "median_sent": 369.5
+  },
+  {
+    "pid": "test/intermediate_algebra/582.json",
+    "level": 5,
+    "gold": "850",
+    "samples": [
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 259,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 4377,
+        "n_sent": 155,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 6318,
+        "n_sent": 247,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 266,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 217,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 4939,
+        "n_sent": 189,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 241,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 258,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.375,
+    "pass_rate": 0.125,
+    "median_tok": 8192.0,
+    "median_sent": 244.0
+  },
+  {
+    "pid": "test/intermediate_algebra/558.json",
+    "level": 5,
+    "gold": "(3,4]",
+    "samples": [
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 416,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 388,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 452,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 386,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 334,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 444,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 388,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 416,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.0,
+    "pass_rate": 0.0,
+    "median_tok": 8192.0,
+    "median_sent": 402.0
+  },
+  {
+    "pid": "test/intermediate_algebra/362.json",
+    "level": 4,
+    "gold": "40",
+    "samples": [
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 367,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 5847,
+        "n_sent": 262,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 6291,
+        "n_sent": 286,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 5979,
+        "n_sent": 283,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 4666,
+        "n_sent": 207,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 345,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 5247,
+        "n_sent": 229,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 7259,
+        "n_sent": 370,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.75,
+    "pass_rate": 0.625,
+    "median_tok": 6135.0,
+    "median_sent": 284.5
+  },
+  {
+    "pid": "test/precalculus/44.json",
+    "level": 5,
+    "gold": "120^\\circ",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 3291,
+        "n_sent": 152,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 3613,
+        "n_sent": 156,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 335,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 4309,
+        "n_sent": 174,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 7236,
+        "n_sent": 272,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2241,
+        "n_sent": 98,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 2914,
+        "n_sent": 142,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 2464,
+        "n_sent": 94,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.875,
+    "pass_rate": 0.125,
+    "median_tok": 3452.0,
+    "median_sent": 154.0
+  },
+  {
+    "pid": "test/intermediate_algebra/345.json",
+    "level": 4,
+    "gold": "504",
+    "samples": [
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 327,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 267,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 374,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 373,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 224,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 342,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 378,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 390,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.0,
+    "pass_rate": 0.0,
+    "median_tok": 8192.0,
+    "median_sent": 357.5
+  },
+  {
+    "pid": "test/algebra/2058.json",
+    "level": 4,
+    "gold": "13",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 3916,
+        "n_sent": 154,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2647,
+        "n_sent": 134,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2528,
+        "n_sent": 107,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1870,
+        "n_sent": 92,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2647,
+        "n_sent": 100,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 5298,
+        "n_sent": 229,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1998,
+        "n_sent": 100,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1226,
+        "n_sent": 62,
+        "correct": true
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 1.0,
+    "median_tok": 2587.5,
+    "median_sent": 103.5
+  },
+  {
+    "pid": "test/intermediate_algebra/232.json",
+    "level": 5,
+    "gold": "81",
+    "samples": [
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 397,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 416,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 359,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 341,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 388,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 386,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 5189,
+        "n_sent": 259,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 6976,
+        "n_sent": 282,
+        "correct": true
+      }
+    ],
+    "closed_rate": 0.25,
+    "pass_rate": 0.25,
+    "median_tok": 8192.0,
+    "median_sent": 372.5
+  },
+  {
+    "pid": "test/geometry/283.json",
+    "level": 4,
+    "gold": "8",
+    "samples": [
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 398,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 378,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 390,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 6255,
+        "n_sent": 318,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 410,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 5458,
+        "n_sent": 266,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 6900,
+        "n_sent": 388,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 4775,
+        "n_sent": 245,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.5,
+    "pass_rate": 0.375,
+    "median_tok": 7546.0,
+    "median_sent": 383.0
+  },
+  {
+    "pid": "test/algebra/972.json",
+    "level": 4,
+    "gold": "11/2",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 2062,
+        "n_sent": 112,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1426,
+        "n_sent": 75,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1417,
+        "n_sent": 74,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1208,
+        "n_sent": 71,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 982,
+        "n_sent": 53,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1531,
+        "n_sent": 62,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1825,
+        "n_sent": 101,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1814,
+        "n_sent": 79,
+        "correct": true
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 1.0,
+    "median_tok": 1478.5,
+    "median_sent": 74.5
+  },
+  {
+    "pid": "test/algebra/2232.json",
+    "level": 4,
+    "gold": "-3",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 1294,
+        "n_sent": 71,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 341,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 2099,
+        "n_sent": 107,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 848,
+        "n_sent": 48,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1146,
+        "n_sent": 66,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1517,
+        "n_sent": 79,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 876,
+        "n_sent": 48,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2173,
+        "n_sent": 98,
+        "correct": true
+      }
+    ],
+    "closed_rate": 0.875,
+    "pass_rate": 0.875,
+    "median_tok": 1405.5,
+    "median_sent": 75.0
+  },
+  {
+    "pid": "test/intermediate_algebra/1063.json",
+    "level": 4,
+    "gold": "1+274i",
+    "samples": [
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 310,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 354,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 327,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 348,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 293,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 306,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 246,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 327,
+        "correct": false
+      }
+    ],
+    "closed_rate": 0.0,
+    "pass_rate": 0.0,
+    "median_tok": 8192.0,
+    "median_sent": 318.5
+  },
+  {
+    "pid": "test/geometry/1140.json",
+    "level": 5,
+    "gold": "3840/289",
+    "samples": [
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 323,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 7803,
+        "n_sent": 351,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 354,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 310,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 336,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 6614,
+        "n_sent": 275,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 339,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 5235,
+        "n_sent": 242,
+        "correct": true
+      }
+    ],
+    "closed_rate": 0.375,
+    "pass_rate": 0.375,
+    "median_tok": 8192.0,
+    "median_sent": 329.5
+  },
+  {
+    "pid": "test/number_theory/753.json",
+    "level": 4,
+    "gold": "13",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 3591,
+        "n_sent": 145,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 6366,
+        "n_sent": 270,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 6096,
+        "n_sent": 262,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 354,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 6151,
+        "n_sent": 287,
+        "correct": true
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 323,
+        "correct": false
+      },
+      {
+        "closed": false,
+        "n_tok": 8192,
+        "n_sent": 330,
+        "correct": false
+      },
+      {
+        "closed": true,
+        "n_tok": 6997,
+        "n_sent": 312,
+        "correct": true
+      }
+    ],
+    "closed_rate": 0.625,
+    "pass_rate": 0.625,
+    "median_tok": 6681.5,
+    "median_sent": 299.5
+  },
+  {
+    "pid": "test/algebra/246.json",
+    "level": 4,
+    "gold": "8",
+    "samples": [
+      {
+        "closed": true,
+        "n_tok": 1800,
+        "n_sent": 90,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1308,
+        "n_sent": 76,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1695,
+        "n_sent": 92,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 2568,
+        "n_sent": 147,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1625,
+        "n_sent": 91,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1744,
+        "n_sent": 93,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 1265,
+        "n_sent": 45,
+        "correct": true
+      },
+      {
+        "closed": true,
+        "n_tok": 823,
+        "n_sent": 46,
+        "correct": true
+      }
+    ],
+    "closed_rate": 1.0,
+    "pass_rate": 1.0,
+    "median_tok": 1660.0,
+    "median_sent": 90.5
+  }
+]

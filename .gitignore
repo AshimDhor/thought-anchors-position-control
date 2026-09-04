@@ -1,0 +1,15 @@
+# Attention tensors: 591 MB, two files over GitHub's 100 MB limit.
+# Fully regenerable — see "Regenerating the attention tensors" in README.md.
+*.npy
+
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+logs/
+*.out
+*.err
+
+# Notebook checkpoints (outputs ARE committed, deliberately — so the results
+# are readable on GitHub without running anything)
+notebooks/.ipynb_checkpoints/

@@ -1,0 +1,121 @@
+{
+  "results": [
+    {
+      "world": "null",
+      "n_traces": 32,
+      "mean_kl_by_position_sextile": [
+        0.1546,
+        0.1394,
+        0.1348,
+        0.1332,
+        0.11,
+        0.1167
+      ],
+      "position_only_spearman": 0.14055086071499162,
+      "position_only_r2": -0.006235339676927687,
+      "top3_agreement_position_only": 0.14583333333333331,
+      "top3_chance": 0.1,
+      "mean_real_kl": 0.13143826570330083,
+      "mean_filler_kl": 0.11485708839101719,
+      "mean_real_minus_filler_all_positions": 0.01658117731228364
+    },
+    {
+      "world": "anchor_random",
+      "n_traces": 32,
+      "mean_kl_by_position_sextile": [
+        0.1278,
+        0.1397,
+        0.1191,
+        0.1168,
+        0.0919,
+        0.0772
+      ],
+      "position_only_spearman": 0.3333378360345957,
+      "position_only_r2": -0.005675089446558479,
+      "top3_agreement_position_only": 0.03125,
+      "top3_chance": 0.1,
+      "mean_real_kl": 0.11208387709863595,
+      "mean_filler_kl": 0.09565221115492735,
+      "mean_real_minus_filler_all_positions": 0.016431665943708595,
+      "planted_real_minus_filler": 0.5211150913954166,
+      "offtarget_real_minus_filler": -0.0009712107960054748,
+      "median_rank_raw": 1.0,
+      "median_rank_residual": 1.0,
+      "frac_top3_raw": 0.96875,
+      "frac_top3_residual": 1.0
+    },
+    {
+      "world": "anchor_fixed",
+      "n_traces": 32,
+      "mean_kl_by_position_sextile": [
+        0.1304,
+        0.1336,
+        0.1891,
+        0.0788,
+        0.0639,
+        0.0877
+      ],
+      "position_only_spearman": 0.3239659891597661,
+      "position_only_r2": 0.10356153186402162,
+      "top3_agreement_position_only": 0.3125,
+      "top3_chance": 0.1,
+      "mean_real_kl": 0.11391829536467132,
+      "mean_filler_kl": 0.09720087854585707,
+      "mean_real_minus_filler_all_positions": 0.016717416818814234,
+      "planted_real_minus_filler": 0.364794864102913,
+      "offtarget_real_minus_filler": 0.004714746222810834,
+      "median_rank_raw": 1.0,
+      "median_rank_residual": 1.5,
+      "frac_top3_raw": 0.8125,
+      "frac_top3_residual": 0.78125,
+      "bin_sweep": {
+        "6": {
+          "frac_top3_residual": 0.78125,
+          "mean_planted_residual": 0.37390175396580977,
+          "mean_planted_raw": 0.5519442426180633
+        },
+        "12": {
+          "frac_top3_residual": 0.78125,
+          "mean_planted_residual": 0.3517185472381488,
+          "mean_planted_raw": 0.5519442426180633
+        },
+        "30": {
+          "frac_top3_residual": 0.5625,
+          "mean_planted_residual": 0.23594565957830677,
+          "mean_planted_raw": 0.5519442426180633
+        },
+        "60": {
+          "frac_top3_residual": 0.46875,
+          "mean_planted_residual": 0.1179728267218591,
+          "mean_planted_raw": 0.5519442426180633
+        }
+      }
+    }
+  ],
+  "checks": [
+    {
+      "check": "null: real arm matches filler arm (|gap| < 0.05 nats)",
+      "pass": true
+    },
+    {
+      "check": "anchor_random: filler gap is positive AT the planted step",
+      "pass": true
+    },
+    {
+      "check": "anchor_random: filler gap is ~zero away from the planted step",
+      "pass": true
+    },
+    {
+      "check": "anchor_random: planted step in top-3 raw (>60% of traces)",
+      "pass": true
+    },
+    {
+      "check": "anchor_random: planted step in top-3 after residualising (>60%)",
+      "pass": true
+    },
+    {
+      "check": "anchor_fixed: residualising attenuates the real anchor monotonically as bins get finer",
+      "pass": true
+    }
+  ]
+}

@@ -1,10 +1,3 @@
-"""Stage 5: the figures the write-up uses.
-
-Primary measure is ``kl_resampling`` -- Bogdan et al.'s importance_r -- so the
-plots speak to their metric rather than a convenient stand-in.  ``tv`` and
-``abs_delta_acc`` are carried through as robustness checks.
-"""
-
 from __future__ import annotations
 
 import argparse
@@ -137,14 +130,7 @@ def fig_filler(df: pd.DataFrame, tag: str, measure: str) -> None:
 
 
 def _place_labels(ax, xs, ys, labels, fontsize=7.5, colour="#222222"):
-    """Annotate points, choosing an offset per label that avoids collisions.
 
-    A fixed offset overlaps whenever two points sit close together --- here
-    "active computation" and "self checking" differ by 0.0003 in importance and
-    landed on top of each other. For each point we try a ring of candidate
-    offsets and keep the first whose text box clears every box already placed
-    and stays inside the axes. Falls back to the default if none is free.
-    """
     fig = ax.get_figure()
     fig.canvas.draw()                      # needed before any bbox is valid
     placed = []

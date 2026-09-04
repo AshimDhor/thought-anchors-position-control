@@ -1,18 +1,3 @@
-"""Are the 'receiver heads' actually receiver heads, or just recency heads?
-
-The sentence-level attention matrix for the heads my score picked out is almost
-entirely diagonal: they attend to the sentence immediately before them. That is
-recency, not the phenomenon Bogdan et al. describe, where a head reaches *back*
-to a distant sentence that is broadcasting to the rest of the trace.
-
-My receiver score used min_gap = 1, so the immediately-preceding sentence counted
-as "received attention from a later sentence". This sweeps min_gap: excluding a
-band around the diagonal forces the score to consider only genuinely long-range
-attention. If the strong positional result survives at large gaps, it is about
-broadcasting. If it collapses, my headline white-box number was measuring
-recency and has to be restated.
-"""
-
 from __future__ import annotations
 
 import argparse

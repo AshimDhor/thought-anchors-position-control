@@ -136,6 +136,46 @@ def fig_filler(df: pd.DataFrame, tag: str, measure: str) -> None:
     plt.close(fig)
 
 
+def _place_labels(ax, xs, ys, labels, fontsize=7.5, colour="#222222"):
+    """Annotate points, choosing an offset per label that avoids collisions.
+
+    A fixed offset overlaps whenever two points sit close together --- here
+    "active computation" and "self checking" differ by 0.0003 in importance and
+    landed on top of each other. For each point we try a ring of candidate
+    offsets and keep the first whose text box clears every box already placed
+    and stays inside the axes. Falls back to the default if none is free.
+    """
+    fig = ax.get_figure()
+    fig.canvas.draw()                      # needed before any bbox is valid
+    placed = []
+    # (dx, dy) in points, tried in order: right, left, above, below, diagonals.
+    candidates = [(7, 3), (-7, 3), (7, -8), (-7, -8), (0, 9), (0, -13),
+                  (13, 8), (-13, 8), (13, -13), (-13, -13), (0, 16), (0, -20)]
+    order = np.argsort(-np.asarray(ys))    # place high points first
+    for i in order:
+        best = None
+        for dx, dy in candidates:
+            ha = "left" if dx >= 0 else "right"
+            ann = ax.annotate(labels[i], (xs[i], ys[i]), fontsize=fontsize,
+                              xytext=(dx, dy), textcoords="offset points",
+                              ha=ha, color=colour, zorder=4)
+            fig.canvas.draw()
+            bb = ann.get_window_extent()
+            inside = ax.get_window_extent().contains(bb.x0, bb.y0) and \
+                     ax.get_window_extent().contains(bb.x1, bb.y1)
+            if inside and not any(bb.overlaps(q) for q in placed):
+                best = (ann, bb)
+                break
+            ann.remove()
+        if best is None:                   # nothing clear: accept the default
+            ann = ax.annotate(labels[i], (xs[i], ys[i]), fontsize=fontsize,
+                              xytext=(7, 3), textcoords="offset points",
+                              ha="left", color=colour, zorder=4)
+            fig.canvas.draw()
+            best = (ann, ann.get_window_extent())
+        placed.append(best[1])
+
+
 def fig_categories(df: pd.DataFrame, tag: str, label_col: str, measure: str) -> None:
     sub = df[(df[label_col] != "unparsed") & df[label_col].notna()].copy()
     if sub.empty or sub[label_col].nunique() < 3:
@@ -164,13 +204,17 @@ def fig_categories(df: pd.DataFrame, tag: str, label_col: str, measure: str) -> 
     fig.savefig(C.FIGURES / f"fig4_categories_{tag}.png", bbox_inches="tight")
     plt.close(fig)
 
-    fig, ax = plt.subplots(figsize=(5.4, 3.5))
+    fig, ax = plt.subplots(figsize=(6.4, 4.0))
     mp = sub.groupby(label_col).position.mean().reindex(order)
     mi = sub.groupby(label_col)[measure].mean().reindex(order)
-    ax.scatter(mp.values, mi.values, s=38, color=REAL)
-    for cat, xx, yy in zip(order, mp.values, mi.values):
-        ax.annotate(cat.replace("_", " "), (xx, yy), fontsize=7,
-                    xytext=(4, 3), textcoords="offset points")
+    ax.scatter(mp.values, mi.values, s=44, color=REAL, zorder=3)
+    # Give the labels room, otherwise the outermost ones run off the axes.
+    xpad = 0.10 * (mp.max() - mp.min())
+    ypad = 0.12 * (mi.max() - mi.min())
+    ax.set_xlim(mp.min() - xpad, mp.max() + xpad * 1.9)
+    ax.set_ylim(mi.min() - ypad, mi.max() + ypad)
+    _place_labels(ax, mp.values, mi.values,
+                  [c.replace("_", " ") for c in order], fontsize=7.5)
     if len(order) >= 3:
         r = stats.pearsonr(mp.values, mi.values)
         ax.set_title(f"Category importance tracks category position  ($r={r.statistic:+.2f}$)",

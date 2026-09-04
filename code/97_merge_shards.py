@@ -1,19 +1,3 @@
-"""Merge sharded rollout files into the single file stage 3 expects.
-
-Two modes.
-
-``--mode dedupe`` (default) stitches together shards of one pass: each
-(trace_id, prefix) appears in exactly one shard, so duplicates mean a shard was
-run twice and the extra copy is dropped.
-
-``--mode concat`` combines *independent passes* over the same prefixes, pooling
-their rollouts. Rollouts are unseeded, so a second pass draws fresh samples from
-the same distribution and concatenating them is simply a larger R. This is the
-cheap way to lower the finite-sample floor, which matters here: at R = 32 on
-problems with only two or three distinct answers, a good fraction of sentences
-sit below their own floor and their individual scores are noise.
-"""
-
 from __future__ import annotations
 
 import argparse

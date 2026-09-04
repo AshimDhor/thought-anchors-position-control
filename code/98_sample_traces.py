@@ -1,9 +1,3 @@
-"""Capture a handful of real traces from each model, for splitter development.
-
-Segmentation is the unit of analysis for this whole project, so it has to be
-developed against text these models actually write -- not against invented
-examples.  Saves raw traces to data/sample_traces_<tag>.json.
-"""
 from __future__ import annotations
 
 import argparse, json, sys

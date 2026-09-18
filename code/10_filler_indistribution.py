@@ -10,14 +10,12 @@ import numpy as np
 from anchors import config as C
 from anchors.rollouts import Engine
 
-# Reuse the exact filler construction from the sweep rather than a copy of it.
 _spec = importlib.util.spec_from_file_location(
     "resample", Path(__file__).with_name("02_resample.py"))
 _resample = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_resample)
 
-# A sentence from a different universe entirely: the scale reference for what
-# "off-distribution" looks like here.
+
 ALIEN = "The Baltic herring fishery reported record landings last quarter."
 
 
@@ -42,7 +40,7 @@ def score_continuations(eng: Engine, prompt: str, continuations: list[str]) -> l
         for entry in tail:
             if not entry:
                 continue
-            # prompt_logprobs=0 returns only the realised token.
+
             vals.append(next(iter(entry.values())).logprob)
         scores.append(float(np.mean(vals)) if vals else float("nan"))
     return scores

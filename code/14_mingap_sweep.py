@@ -59,8 +59,7 @@ def main() -> None:
                 tids.append(tid); poss.append((j + 1) / S); vals.append(float(v[j]))
         res = position_only_baseline(np.array(tids), np.array(poss), np.array(vals))
 
-        # How much of these heads' attention mass sits within one sentence of the
-        # diagonal? High means the "receiver" heads are really recency heads.
+
         diag = []
         for tid, M in mats.items():
             A = M[sel[:, 0], sel[:, 1]].mean(axis=0)

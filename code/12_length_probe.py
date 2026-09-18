@@ -13,9 +13,7 @@ from anchors.answers import final_answer, normalise
 from anchors.rollouts import Engine, GenConfig, split_thinking
 from anchors.splitting import split_sentences
 
-# A brevity nudge, tested as a separate arm.  If it shortens traces without
-# flattening the answer distribution, it buys the whole study; if it makes the
-# model terse and confident, it costs the variance the measure needs.
+
 CONCISE = (" Keep your reasoning focused and avoid restating work you have "
            "already done.")
 
@@ -32,9 +30,7 @@ def main() -> None:
     ap.add_argument("--gpu-frac", type=float, default=0.85)
     args = ap.parse_args()
 
-    # Parse any digits found. sbatch --export treats commas as separators
-    # between exported variables, so LEVELS="4,5" silently arrived as "4" and
-    # a probe I thought covered levels 4-5 actually covered level 3 only.
+
     levels = {int(x) for x in re.findall(r"\d", args.levels)}
     ds = load_dataset("HuggingFaceH4/MATH-500", split="test")
     probs = [r for r in ds if r["level"] in levels][: args.n_problems]
@@ -63,12 +59,7 @@ def main() -> None:
                 "answer": ans,
                 "correct": ans == gold,
             })
-        # What the estimator actually needs is dispersion in the answer
-        # distribution, not a particular accuracy. A problem where the model
-        # gives six different wrong answers has plenty of room for a sentence to
-        # move things; one where it confidently repeats the same wrong answer has
-        # none. Pass rate is only a proxy for this, and a lossy one, so record
-        # the distribution itself.
+
         finished = [r["answer"] for r in recs if r["answer"] is not None]
         cnt = Counter(finished)
         if finished:
@@ -131,7 +122,6 @@ def main() -> None:
             ms = np.array([r["median_sent"] for r, k in zip(rows, m) if k])
             print(f"      their traces: median {np.median(mt):.0f} tokens, "
                   f"{np.median(ms):.0f} sentences")
-            # The number that decides feasibility.
             cost = np.sum((ms + 1) * C.ROLLOUTS_PER_PREFIX * (mt / 2 + 120))
             print(f"      full sweep over those {m.sum()} traces: "
                   f"~{cost/1e6:.0f}M tokens (~{cost/3000/3600:.1f} h at 3000 tok/s)")

@@ -21,10 +21,7 @@ def main() -> None:
 
     probe_path = C.DATA / f"lengthprobe_{tag}.json"
     if probe_path.exists():
-        # The length probe already measured, per problem: answer-distribution
-        # entropy, how reliably the model closes </think>, and trace length.
-        # That is strictly more than the difficulty screen produced, so there is
-        # no reason to spend another GPU-hour re-measuring it.
+
         probe = json.loads(probe_path.read_text())
         band = [r for r in probe
                 if r["answer_entropy"] >= C.MIN_ANSWER_ENTROPY
@@ -32,10 +29,7 @@ def main() -> None:
         print(f"{len(probe)} problems probed; "
               f"{len(band)} pass entropy>={C.MIN_ANSWER_ENTROPY} "
               f"and closing>={C.MIN_CLOSED_RATE}")
-        # Among qualifying problems, prefer the shortest traces. Sweep cost is
-        # linear in trace length and the selection is on a nuisance variable,
-        # not on anything the hypothesis is about -- but it does bias the trace
-        # set toward shorter reasoning, which the write-up states.
+
         band.sort(key=lambda r: r["median_tok"])
         for r in band[: args.n_problems]:
             print(f"    {r['pid']:26s} L{r['level']} entropy {r['answer_entropy']:.2f} "

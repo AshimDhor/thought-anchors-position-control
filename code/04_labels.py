@@ -27,7 +27,6 @@ def build_prompt(eng: Engine, context: str, target: str) -> str:
 
 def parse(out: str) -> str:
     low = out.lower()
-    # Models that think first bury the answer; take the last category mentioned.
     hits = [c for c in CATEGORIES if c in low]
     if hits:
         return max(hits, key=lambda c: low.rfind(c))
@@ -69,8 +68,7 @@ def main() -> None:
     print(df[col].value_counts().to_string())
     print(f"unparsed: {(df[col] == 'unparsed').mean():.2%}")
 
-    # If two labellers have been run, report how often they agree.  A category
-    # story is only as good as the labels underneath it.
+
     label_cols = [c for c in df.columns if c.startswith("label_")]
     if len(label_cols) >= 2:
         a, b = label_cols[-2], label_cols[-1]

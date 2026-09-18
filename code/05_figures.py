@@ -194,7 +194,6 @@ def fig_categories(df: pd.DataFrame, tag: str, label_col: str, measure: str) -> 
     mp = sub.groupby(label_col).position.mean().reindex(order)
     mi = sub.groupby(label_col)[measure].mean().reindex(order)
     ax.scatter(mp.values, mi.values, s=44, color=REAL, zorder=3)
-    # Give the labels room, otherwise the outermost ones run off the axes.
     xpad = 0.10 * (mp.max() - mp.min())
     ypad = 0.12 * (mi.max() - mi.min())
     ax.set_xlim(mp.min() - xpad, mp.max() + xpad * 1.9)

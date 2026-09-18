@@ -43,15 +43,13 @@ def main() -> None:
     pos = d.position.values.astype(float)
     cats = sorted(d[label_col].unique())
     D = np.column_stack([(d[label_col] == c).astype(float) for c in cats[:-1]])
-    # Position enters as a cubic so the comparison is not rigged by giving
-    # category a flexible form and position a straight line.
+
     P = np.column_stack([pos, pos ** 2, pos ** 3])
 
     out: dict = {"model": args.model, "measure": args.measure,
                  "label_col": label_col, "n": int(len(d)),
                  "categories": cats}
 
-    # 1. How positional is category membership?
     grp = d.groupby(label_col)
     mean_pos = grp.position.mean()
     kw = stats.kruskal(*[g.position.values for _, g in grp])
@@ -63,7 +61,6 @@ def main() -> None:
     print(f"category vs position: Kruskal H={kw.statistic:.1f} p={kw.pvalue:.2e}; "
           f"category mean positions span {mean_pos.min():.2f}-{mean_pos.max():.2f}")
 
-    # 2. Nested variance decomposition.
     r2_pos = _ols_r2(P, y)
     r2_cat = _ols_r2(D, y)
     r2_both = _ols_r2(np.column_stack([P, D]), y)
@@ -80,7 +77,6 @@ def main() -> None:
           f"unique to position {v['position_unique']:.3f}; "
           f"shared {v['shared']:.3f}")
 
-    # 3. Does the category ranking survive residualisation?
     res = position_only_baseline(d.trace_id.values, pos, y)
     d["residual"] = y - np.interp(pos, res.curve_x, res.curve_y)
     raw_rank = grp[args.measure].mean().sort_values(ascending=False)
@@ -102,8 +98,7 @@ def main() -> None:
     print(f"   top-3 raw      : {out['ranking']['top_raw']}")
     print(f"   top-3 residual : {out['ranking']['top_residual']}")
 
-    # 4. And the direct, position-free comparison for each category: does the
-    # real sentence beat its own filler within that category?
+
     fcol = "filler_kl" if args.measure.startswith("kl") else "filler_tv"
     if fcol in d and d[fcol].notna().any():
         sub = d.dropna(subset=[fcol])

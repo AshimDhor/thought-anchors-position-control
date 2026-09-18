@@ -41,7 +41,6 @@ def main() -> None:
 
     fig, axes = plt.subplots(1, 3, figsize=(13.2, 3.7))
 
-    # (a) what explains importance
     ax = axes[0]
     names = ["position\n(cubic)", "sentence\ncategory", "headroom\n$H(A_{i-1})$", "all three"]
     vals = [vd["r2_position"], vd["r2_category"], vd["r2_entropy_before"], vd["r2_all"]]
@@ -56,7 +55,6 @@ def main() -> None:
     ax.set_title("What importance is made of", loc="left", fontsize=10)
     ax.grid(alpha=0.25, axis="y")
 
-    # (b) the relationship itself
     ax = axes[1]
     ax.scatter(d.entropy_before, d.kl_resampling, s=10, alpha=0.35,
                color=NEUTRAL, edgecolors="none")
@@ -74,7 +72,6 @@ def main() -> None:
                  loc="left", fontsize=10)
     ax.grid(alpha=0.25)
 
-    # (c) and headroom is only weakly positional, so this is not position in disguise
     ax = axes[2]
     ax.scatter(d.position, d.entropy_before, s=10, alpha=0.35,
                color=NEUTRAL, edgecolors="none")

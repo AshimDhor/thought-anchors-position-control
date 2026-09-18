@@ -115,16 +115,13 @@ def main() -> None:
           f"effects on trace length and are stated as limitations.")
     print(f"  sentences per trace: min {min(n_sent)}, median {sorted(n_sent)[len(n_sent)//2]}, max {max(n_sent)}")
     print(f"  base trace correct: {sum(t['base_correct'] for t in traces)}/{len(traces)}")
-    # Cost is reported for the sweep we actually run. With windowed sampling the
-    # prefix count is roughly constant per trace rather than proportional to
-    # sentence count, so quoting (n+1) here overstated it by ~4x.
+
     if C.N_WINDOWS > 0:
         n_prefix = sum(min(n + 1, C.N_WINDOWS * (C.WINDOW_LEN + 1) + 2) for n in n_sent)
     else:
         n_prefix = sum(n + 1 for n in n_sent)
     chars = [len(t["thinking"]) for t in traces]
-    # Rough cost model: a rollout from prefix i writes the remainder of the
-    # trace, so the mean rollout is about half a trace, plus the answer.
+
     per_trace_prefixes = (n_prefix / max(len(traces), 1))
     est_tokens = sum(per_trace_prefixes * C.ROLLOUTS_PER_PREFIX *
                      (len(t["thinking"]) / 4 / 2 + 120) for t in traces)

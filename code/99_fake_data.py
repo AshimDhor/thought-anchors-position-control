@@ -33,13 +33,11 @@ def main() -> None:
 
     for k in range(6):
         sim = simulate_trace(cfg, seed=100 + k)
-        # Build a plausible thinking string out of the pool so that the splitter,
-        # the example dumper and the label stage all have real text to chew on.
+
         parts = [SENTENCE_POOL[(k + j) % len(SENTENCE_POOL)] for j in range(cfg.n_sentences)]
         thinking = " ".join(parts)
         sents = split_sentences(thinking)
-        # The pool may merge/split differently; trust the splitter and trim the
-        # simulated rollouts to match, which is what the real pipeline does too.
+
         n = min(len(sents), cfg.n_sentences)
         tid = f"fake/{k}"
         traces.append({

@@ -59,34 +59,24 @@ def build_jobs(traces: list[dict], arm: str, subsample: float = 1.0,
             else:
                 idxs = list(range(-1, len(sents)))
             for i in idxs:
-                # i = -1 is the empty prefix: the model writes its own reasoning.
                 jobs.append({"trace_id": t["trace_id"], "i": i,
                              "prefix": "" if i < 0 else t["thinking"][: sents[i]["end"]]})
         else:
             if n_windows > 0:
-                # Only sentences whose i-1 prefix was also swept are measurable,
-                # so the filler arm has to target that same set -- a filler at a
-                # slot with no A_{i-1} to compare against is wasted compute.
+
                 swept = set(sample_windows(len(sents), n_windows, window_len,
                                            np.random.default_rng(seed)))
                 keep = np.array(sorted(i for i in swept if i >= 0 and (i - 1) in swept))
             else:
                 keep = np.arange(len(sents))
             if subsample < 1.0 and len(keep):
-                # Uniform over slots, so the filler arm stays spread across
-                # positions rather than clustering anywhere.
+
                 n_keep = max(1, int(round(subsample * len(keep))))
                 keep = np.sort(rng.choice(keep, size=n_keep, replace=False))
             for k in keep:
                 s = sents[int(k)]
                 filler = matched_filler(s["text"], int(k))
-                # Sentence spans tile the trace exactly, and the whitespace
-                # separating a sentence from the one before it sits at the START
-                # of the sentence's own span. So thinking[:s.start] ends flush
-                # against the previous full stop, and concatenating the filler
-                # straight on gives "...left-hand side.Let me think...". Carry
-                # the original leading whitespace over so the filler arm differs
-                # from the main arm in content and nothing else.
+
                 raw = t["thinking"][s["start"] : s["end"]]
                 lead = raw[: len(raw) - len(raw.lstrip())]
                 jobs.append({"trace_id": t["trace_id"], "i": s["index"],
@@ -151,8 +141,7 @@ def main() -> None:
                 "filler": j.get("filler"),
                 "answers": answers,
                 "first_sentences": firsts,
-                # Keep two completions per prefix so the write-up can show raw,
-                # randomly-selected continuations rather than only summary stats.
+
                 "sample_completions": comps[:2],
             }
         )

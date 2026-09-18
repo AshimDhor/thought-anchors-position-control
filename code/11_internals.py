@@ -37,9 +37,7 @@ def aggregate_to_sentences(attn: torch.Tensor, spans: list[range],
     """
     H, T, _ = attn.shape
     if drop_sink:
-        # The first token soaks up a large, content-free share of attention in
-        # most models. Zeroing it and renormalising stops that constant from
-        # dominating every head's profile.
+
         attn = attn.clone()
         attn[:, :, 0] = 0.0
         attn = attn / attn.sum(dim=-1, keepdim=True).clamp_min(1e-9)

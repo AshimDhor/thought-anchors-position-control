@@ -62,10 +62,7 @@ def main() -> None:
     cfg = GenConfig(temperature=C.TEMPERATURE, top_p=C.TOP_P,
                     max_tokens=C.MAX_NEW_TOKENS)
 
-    # Over-generate.  Traces get rejected for running past the token budget
-    # without closing </think>, or for falling outside the sentence-count window,
-    # and on hard problems that rejection rate can be high.  Generating 6x the
-    # target costs a few minutes and avoids coming up short.
+
     cands = band[: max(args.n_problems * 2, args.n_problems + 6)]
     prompts = [eng.chat_prefix(p["problem"], C.INSTRUCTION) for p in cands]
     outs = eng.generate(prompts, cfg, n=args.traces_per_problem)

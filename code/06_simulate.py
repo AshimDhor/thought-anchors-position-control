@@ -19,8 +19,7 @@ def run_world(name: str, cfg: SimConfig, n_traces: int, seed0: int,
     for k in range(n_traces):
         this = cfg
         if random_anchor and cfg.anchor_step is not None:
-            # Keep it away from the very ends, where a trace has little room
-            # either side and the comparison degenerates.
+
             step = int(rng.integers(4, cfg.n_sentences - 4))
             this = SimConfig(**{**cfg.__dict__, "anchor_step": step})
         sim = simulate_trace(this, seed=seed0 + k)
@@ -83,11 +82,8 @@ def run_world(name: str, cfg: SimConfig, n_traces: int, seed0: int,
         out["frac_top3_raw"] = float(np.mean([r <= 3 for r in ranks_raw]))
         out["frac_top3_residual"] = float(np.mean([r <= 3 for r in ranks_res]))
 
-        # How much of the planted effect does residualising remove?  The
-        # position-only curve is a smoother, so its resolution is a knob: coarse
-        # bins smear a positionally-clustered anchor across neighbours and leave
-        # most of it standing, fine bins subtract it away.  Anyone using this
-        # control needs to know the knob exists.
+
+
         if bin_sweep:
             sweep = {}
             for nb in bin_sweep:
@@ -136,8 +132,7 @@ def main() -> None:
          rand["frac_top3_raw"] > 0.6),
         ("anchor_random: planted step in top-3 after residualising (>60%)",
          rand["frac_top3_residual"] > 0.6),
-        # Stated as a directional prediction, not a threshold: the point is
-        # that the attenuation grows as the smoother gets finer.
+
         ("anchor_fixed: residualising attenuates the real anchor monotonically "
          "as bins get finer",
          all(fixed["bin_sweep"][a]["mean_planted_residual"]
